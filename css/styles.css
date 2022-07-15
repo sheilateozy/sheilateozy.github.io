@@ -11411,15 +11411,13 @@ header.masthead {
   text-align: center;
   color: #fff;
   background-image: url("../assets/background/header_background.jpg");
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.2);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
   background-size: cover;
 }
-
-
 
 header.masthead .masthead-subheading {
   font-size: 1.5rem;

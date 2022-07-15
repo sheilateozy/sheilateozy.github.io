@@ -11411,7 +11411,7 @@ header.masthead {
   text-align: center;
   color: #fff;
   background-image: url("../assets/background/header_background.jpg");
-  background-color: rgba(0,0,0,0.05);
+  background-color: rgba(0,0,0,0.15);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: scroll;

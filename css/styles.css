@@ -11410,8 +11410,8 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("../assets/background/header_background.jpg");
-  background-color: rgba(0,0,0,0.15);
+  background-image: url("../assets/background/header_bg.jpg");
+  background-color: rgba(0,0,0,0.3);
   background-blend-mode: multiply;
   background-repeat: no-repeat;
   background-attachment: scroll;

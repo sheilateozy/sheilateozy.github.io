@@ -11482,8 +11482,8 @@ header.masthead .masthead-heading {
   opacity: 1;
 }
 #portfolio .portfolio-item .portfolio-caption {
-  padding: 1.35rem;
-  text-align: center;
+  padding: 1rem;
+  text-align: left;
   background-color: #fff;
 }
 #portfolio .portfolio-item .portfolio-caption .portfolio-caption-heading {

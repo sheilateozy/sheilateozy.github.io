@@ -159,11 +159,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/2.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/images/portfolio/spotify/spotify.jpeg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Explore</div>
-                                <div class="portfolio-caption-subheading text-muted">Graphic Design</div>
+                                <div class="portfolio-caption-heading">Predicting track-skipping</div>
+                                <div class="portfolio-caption-subheading text-muted">Spotify Sequential Skip Prediction Challenge hosted by Spotify, WSDM, and CrowdAI.<br><br><b>Top 7% out of 1350 participants.</b></div>                         
                             </div>
                         </div>
                     </div>
@@ -323,25 +323,39 @@
                                 <div class="modal-body">
                                     <!-- Project details-->
                                     <h2 class="text-uppercase">Forecasting<br>supply chain costs</h2>
-                                    <h3 class="text-warning">Time-series modelling using ARIMA</h3>
-                                    <p class="item-intro text-muted">Designed desktop application that uses ARIMA models to detect cost errors.<br>Created interactive Tableau dashboards depicting costs across components and time.</p>
-                                    
-                                  
-                                    
-                                    <h3>Motivation</h3>
-                                        <p style="text-align:justify;">Apple purchases components parts for its products from third party suppliers. The prices of these parts can be volatile at times due to trends and seasonalities, which snowballs into significant supply chain cost impacts.<br><br>This project uses time-series modelling to predict a reasonable cost range for thousands of parts in each month, and is used to flag warnings when the true cost of a part is outside of this range. This information can then be used for price negotiations with part suppliers.</p>
-                                    
-                                    <h3>Methodology</h3>
-                                        <p style="text-align:justify;">1. Data simulation for parts with lesser cost history data using a normal distribution with the same mean and variance as the available data.</p>
+                                    <h3 class="text-warning">Time-series modelling using ARIMA: < 0.1% MAPE</h3>
+                                    <p class="item-intro text-muted">Designed desktop application that uses ARIMA models to predict cost and detect errors.<br>Created interactive Tableau dashboards depicting costs across components and time.<br><b>Cost savings of $20 million yearly.</b></p>
+                     
+                                    <a href="https://github.com/sheilateozy/Apple_Forecasting-Supply-Chain-Costs" class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        View on GitHub ☻
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <h3 style="text-align:left;">About</h3>
+                                        <p style="text-align:justify;">Apple purchases components parts for its products from third party suppliers. The prices of these parts can be volatile at times due to trends and seasonalities, which snowballs into significant supply chain cost impacts.<br><br>
+                                            This project uses ARIMA models to predict a reasonable cost range for hundreds of parts in each month. These models work in the back-end of the following desktop application:</p>
+                                        <img class="img-fluid" src="assets/images/portfolio/apple/desktop_application.png">
+                                        <p style="text-align:justify;">The application takes in data on component part costs, in both Excel and CSV formats. Upon running the ARIMA models, it then flags out warnings for component parts whose costs are higher than they should be, and produces analysis reports explaining the likely reasons behind the cost spike.<br><br>
+                                            This is used in real-time to catch areas in which Apple may be overpaying in its supply chain, or used on an ex-ante basis to negotiate future part costs with suppliers. Projected cost savings are $20 million yearly.</p>
+                                    <br>
+
+                                    <h3 style="text-align:left;">Data</h3>
+                                        <p style="text-align:justify;">Cost that Apple paid for each component part in each month. The data covers 768 component parts across multiple years.
+                                    <br>
+                                    <br>
+
+                                    <h3 style="text-align:left;">Methodology</h3>
+                                        <p style="text-align:justify;">1. Remove outliers in data to discard noise. Next, simulate data for component parts with lesser cost history data using a normal distribution with the same mean and variance as the available data.</p>
                                         <img class="img-fluid" src="assets/images/portfolio/apple/data_simulation.png">
-                                            
                                         
-                                               
-                                         
-                                    
-                                    
-                                    
-         
+                                        <p style="text-align:justify;">2. Build one ARIMA model for each component part's cost. As such, 768 models are trained. For each model, grid search for its optimal ARIMA (p, d, q) hyperparameters, determined by the lowest MAPE on a left-out test set.</p>
+
+                                        <p style="text-align:justify;">3. When predicting the cost of a component part for the next month, apart from simply outputting cost predictions, calculate a 95% confidence interval for the prediction. This serves as a reasonable cost range for the part. Below is a graphical illustration, where the cost range is shown as a shaded grey area.</p>
+                                        <img class="img-fluid" src="assets/images/portfolio/apple/prediction.png">
+
+        
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -363,20 +377,118 @@
                             <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/2.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Explore
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Graphic Design
-                                        </li>
-                                    </ul>
+                                    <h2 class="text-uppercase">Predicting sequential track-skipping</h2>
+                                    <h3 class="text-warning">XGBoost: Accuracy of 76.8%</h3>
+                                    <p class="item-intro text-muted">
+                                        Regularized k-fold target encoding of categorical features.<br>
+                                        Hyperparameter tuning using Bayesian Optimization.<br>
+                                        Threshold-moving to minimize expected costs in real-world model deployment.<br>
+                                        <b>Top 7% out of 1350 participants.</b></p>
+
+
+                                    <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping" class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        View on GitHub ☻
+                                    </a>
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <h3 style="text-align:left;">About</h3>
+                                    <p style="text-align:justify;">A central challenge for Spotify is to recommend the right music to each user. While there exists a large body of work on recommender systems, there is at present little work describing how users sequentially interact with the streamed content they are presented
+                                    with. Music content is unique in that the question of if, and when, a user skips a track is an important implicit feedback signal on the quality of the system's recommendation.
+                                    <br><br>
+                                    I explore this important and understudied problem in music streaming by building a machine learning model that predicts whether a user will skip or listen to tracks that they are streamed, given their immediately preceding interactions in a listening session.</p>
+                                    <br>
+
+                                    <h3 style="text-align:left;">The Cool(er) Findings: Threshold-moving for real-world model deployment</h3>
+                                        <p style="text-align:justify;">As opposed to simply using the default decision threshold of 0.5 to classify a positive condition, threshold-moving is important in the real-world deployment of models.
+                                            The default threshold of 0.5 will only be optimal if the business costs of a False Negative (FN) and a False Positive (FP) are equal. However, this is rarely the case in reality.
+                                            <br><br>In this project, an FP occurs when a song is identified to be skipped and thus not recommended to a user, but in
+                                            fact would not have been skipped. Hence, costs are incurred due to the user not being
+                                            exposed to a song he would have enjoyed. However, this presents a relatively lower cost to
+                                            Spotify since user satisfaction is unaffected. 
+                                            <br><br>On the other hand, a FN occurs when a song identified to not be skipped is in fact skipped by a
+                                            user. Costs are incurred due to lower user satisfaction with the streaming service. This presents a
+                                            much higher cost to Spotify. As such, the costs of FP and FN are unequal.
+                                            <br><br>I assume that a FN generates twice the cost of a FP for
+                                            Spotify. For each decision threshold, I obtain the resulting confusion matrix and subsequently
+                                            compute expected costs as 2𝐹𝑁 + 𝐹𝑃, resulting in the below graph:</p>
+                                        <br>
+                                        <img class="img-fluid" src="assets/images/portfolio/spotify/threshold_moving.png">
+                                        <br>
+                                        <p style="text-align:justify;">The optimal threshold is the one resulting in
+                                            the minimum expected cost. This optimal threshold is found to be 0.2655, ie. a track is classified to be skipped as long
+                                            as its predicted probability from the final XGBoost model is above 0.2655. </p>
+                                        <br>
+
+                                    <h3 style="text-align:left;">Methodology</h3>
+                                        <br>
+                                        <h4 style="text-align:left;">1. Feature engineering to capture sequential information</h4>
+                                        <p style="text-align:justify;">Since the aim of this paper is to predict sequential track-skipping behaviour, it is crucial to engineer
+                                        smart features that are able to capture the sequential nature of our data. This is further pivotal when
+                                        utilizing algorithms that are not inherently optimized for modelling sequential data. Some of the features engineered for this include:</p>
+                                            <li style="text-align:left;"><i>skip_previous</i>: Binary variable that depicts if the track encountered right before the current one was skipped by the user.</li>
+                                            <br>
+                                            <li style="text-align:left;"><i>skip_prop_prior_to_track</i>: Depicts the proportion of skips that the user has made on all tracks encountered prior to the current track.</li>
+                                            <br>
+                                            <li style="text-align:justify;"><i>skip_prop_prior_to_track_SD</i>: Depicts the
+                                                standard deviation of <i>skip_prop_prior_to_track</i> at each point in time.
+                                                This depicts the consistency of the user’s skipping action prior to the current track. 
+                                                For instance, <i>skip_prop_prior_to_track_SD=0</i> on track 5 implies that the user had made the same action on all of
+                                                the 4 prior tracks (either skipped all or not skipped all). We can therefore be more certain of the
+                                                predictive power of <i>skip_prop_prior_to_track</i> for forecasting user action on this 5th track, since the
+                                                user is very likely to also make the same action. As such, the lower the <i>skip_prop_prior_to_track_SD</i>,
+                                                the more consistent the user’s past track-skipping behavior, and the more certain we are in predicting
+                                                user action on the next track.</li>
+                                        <br>
+                                        <p style="text-align:justify;">In particular, <i>skip_previous</i> and <i>skip_prop_prior_to_track</i>
+                                            are found to be among the most important predictors of track-skipping behavior:</p>
+                                        <img class="img-fluid" src="assets/images/portfolio/spotify/feature_importance.png">
+
+                                        
+                                        <h4 style="text-align:left;">2. Encode categorical features</h4>
+                                            <p style="text-align:justify;">I use regularized k-fold target encoding. The usage of k folds ensures that the target value of
+                                            an observation is not used to compute its target-encoded predictors. Instead, other observations in the
+                                            training data are used. The dataset is first split into k folds, and the means for each category in the
+                                            𝑖^𝑡ℎ fold is computed using data in the other k-1 folds. To further prevent overfitting, I additionally
+                                            add random noise into the target-encoded values for each category. This provides extra regularization
+                                            to the k-fold target encoding.
+                                        </p>
+
+                                        <h4 style="text-align:left;">3. Select metric of focus</h4>
+                                            <p style="text-align:justify;">The metrics of particular significance in our specific business case are:</p>
+                                                <li style="text-align:left;">Recall: It is of greater business utility to identify tracks that will be skipped over ones that will
+                                                    not. Identification of these songs can pave the way for Spotify to improve on their track
+                                                    recommendation system.</li>
+                                                <br>
+                                                <li style="text-align:left;">Precision: It is important for the model to be certain when identifying a track that will be skipped.</li>
+                                                <br>
+                                                <li style="text-align:left;">F2-Score: Given our combined emphasis on both Recall and Precision, I ultimately look at the
+                                            F2-Score as a combined measure of both. In particular, choosing the F2-Score over the more
+                                            commonly utilized F1-Score implies Recall is weighed twice as heavily as compared to Precision, as opposed to equally.
+                                            I particularly choose this due to the very likely differences in the real-world business costs of
+                                            False Positives (FP) and False Negatives (FN) for Spotify in the context of track-skipping.</li>
+                                        
+                                        <br><br>
+
+                                         <h4 style="text-align:left;">4. Tune XGBoost using Bayesian Optimization</h4>
+                                            <p style="text-align:justify;">I utilize a Bayesian Optimization search method with 5-fold cross validation in order to obtain the
+                                            optimal hyperparameters in the most efficient manner. 
+                                            <br><br>This is as compared to using simpler
+                                            hyperparameter search methods such as Grid Search and Random Search, where each
+                                            hyperparameter combination searched during tuning is independent of the last. In contrast, Bayesian
+                                            Optimization uses knowledge of previous iterations of the algorithm such that each new search is
+                                            guided from previous search results. This allows the algorithm to obtain optimal hyperparameters in
+                                            as few iterations as possible, thus reducing computational cost.
+                                         </p>
+                                         <br>
+
+                                    <h3 style="text-align:left;">Still curious?</h3>
+                                    <p style="text-align:justify;">I authored a research paper covering the details of my methodology and findings when I took a PhD-level Machine Learning class at Columbia. This paper was awarded the top mark in the class (full-mark grade).</p>
+                                    <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping/blob/main/research_paper.pdf" class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        Read the paper
+                                    </a>
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
@@ -388,6 +500,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Portfolio item 3 modal popup-->
         <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">

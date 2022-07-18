@@ -11420,7 +11420,7 @@ header.masthead {
   background-size: cover;
 }
 
-header.masthead .masthead-subheading {
+header.masthead .masthead-subheading { 
   font-size: 1.5rem;
   font-style: italic;
   line-height: 1.5rem;
@@ -11522,7 +11522,13 @@ header.masthead .masthead-heading {
 }
 .portfolio-modal .modal-content img {
   margin-bottom: 2rem;
-}
+  }
+
+.portfolio-modal .modal-body img {
+  max-width: 80%;
+  height: auto;
+  }
+
 .portfolio-modal .close-modal {
   position: absolute;
   top: 1.5rem;

@@ -806,8 +806,8 @@
                                                     <p>Our project involves creating a machine learning model that scores prospective renters in terms of their conversion rate, ie. probability of eventually renting from the leasing agent.</p>
                                                         
                                                     <p>Prior to this project, leasing agents who use Funnel's software have no predetermined method of filtering through hundreds of new prospective renters that come in everyday, in deciding which ones are more important to follow up on.
-                                                        This project aims to enhance the software's capabilities by integrating this machine learning model into its system. With this, all prospective renters that express interest will be ranked by likely conversion rate and leasing agents
-                                                        can then prioritize them accordingly to help maximise conversion results. This increase the utility that Funnel's software provides to leasing agents.</p>
+                                                        This project aims to enhance the software's capabilities by integrating this machine learning model into its system. With this, all prospective renters that express interest will be ranked by predicted conversion rate and leasing agents
+                                                        can then prioritize them accordingly to help maximise conversion results. This increases the utility that Funnel's software provides to leasing agents.</p>
                                                 <br>
                                                 <br>
                                                 <h3 style="text-align:left;">Results: Making an impact at Funnel</h3>
@@ -831,8 +831,8 @@
                                                 <h3 style="text-align:left;">Project Methodology</h3>
                                                 <br>
                                                     <h4 style="text-align:left;">1. Data exploration: Data characteristics unique to this project</h4>
-                                                        <p>Investigations reveal a special characteristic of the data, unique to the context of this project: 
-                                                            Different types of data are obtained regarding a prospective renter at distinct points in time of the prospect's journey with a leasing agent. 
+                                                        <p>Investigations reveal a special characteristic of this project's data:
+                                                            Different subsets of the data are obtained at different points in time of the prospective renter's journey with a leasing agent. 
                                                             Specifically, more data is obtained as this journey progresses through the following stages:</p>
                                                             
                                                         <h5 style="text-align:center;">Stage 1: Prospect creation</h5>
@@ -857,7 +857,7 @@
                                                         </p>
 
                                                     <h4 style="text-align:left;">2. Make modelling decisions: Build 1 model per stage of prospective renter's journey</h4>
-                                                        <p>Given the above, instead of creating one overarching model, we develop a three-model approach, to be respectively used at each stage of the prospective renter's journey, where we procure new data. 
+                                                        <p>Given the above, instead of creating one overarching model, we develop a three-model approach, to be respectively used at each stage of the prospective renter's journey, when we procure new data.
                                                             Each subsequent model uses more features than the last, since it uses the data of its preceding models, as well as the new data that comes in.</p>
 
                                                             <h5 style="text-align:center;">Model 1: Used on prospective renters at prospect creation stage</h5>
@@ -898,7 +898,7 @@
                                                             Importantly, we choose to explore CatBoost since the final subset of features selected for modelling contains many categorical features.
                                                             CatBoost provides in-built categorical feature encoding, thus cutting down on significant time required for such encoding tasks prior to model building.
                                                             Additionally, the dataset is extremely large, with 60 million rows. This puts an extra strain on computational time for model building. 
-                                                            CatBoost has been shown to be 8x faster than the state-of-the-art XGBoost, which again suits the nature of this project. 
+                                                            CatBoost has been shown to be 8x faster than the state-of-the-art XGBoost, thus it proves further ideal for this project.
                                                         </p>
 
                                                         <p>Read more about CatBoost here: 
@@ -911,7 +911,7 @@
                                                             as well as the direction of its contribution (does a greater value for the feature increase or decrease conversion rate).
                                                         </p>
 
-                                                        <p>Traditional impurity-based or permutation-based feature importance methods are unable to give this direction of contribution. As such, I utilize SHapley Additive exPlanations (SHAP) feature importances, which uses game theory in its computations.
+                                                        <p>Traditional impurity-based or permutation-based feature importance methods are unable to give this direction of contribution. As such, we utilize SHapley Additive exPlanations (SHAP) feature importances, which uses game theory in its computations.
                                                         </p>
 
                                                         <p>We obtain the following SHAP feature importance plot depicting the most important features:</p>
@@ -930,7 +930,7 @@
                                                 <br>
                                                 <h3 style="text-align:left;">One cool takeaway:<br>Using ROC-AUC to tailor metrics to business goals</h3>
                                                     <p>Machine learning models can be measured across a suite of metrics.
-                                                        In order to make modelling decisions that push my project towards attaining its business goals, I specifically tailor the metric used in modelling (hyperparameter tuning, model selection) to these goals.
+                                                        In order to make modelling decisions that push my project towards attaining its business goals, we specifically tailor the metric used in modelling (hyperparameter tuning, model selection) to these goals.
                                                         We choose the ROC-AUC (Area under the ROC curve) due to 3 key reasons:</p>
 
                                                     <h4 style="text-align:left;">1. Ranking</h4>

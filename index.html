@@ -148,7 +148,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Forecasting supply chain costs</div>
-                                <div class="portfolio-caption-subheading text-muted">I spent a semester working as<br>a Student Data Scientist at Apple.<br><br><b>Cost savings of $20 million yearly.</b></div>
+                                <div class="portfolio-caption-subheading text-muted">I worked as a Student Data Scientist at Apple.<br><br><br><b>Cost savings of $20 million yearly.</b></div>
                             </div>
                         </div>
                     </div>
@@ -163,7 +163,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Predicting track-skipping</div>
-                                <div class="portfolio-caption-subheading text-muted">Spotify Sequential Skip Prediction Challenge hosted by Spotify, WSDM, and CrowdAI.<br><br><b>Top 7% out of 1350 participants.</b></div>                         
+                                <div class="portfolio-caption-subheading text-muted">Competed in Spotify's<br>Sequential Skip Prediction Challenge.<br><br><b>Top 7% out of 1350 participants.</b></div>                         
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Forecasting product demand</div>
-                                <div class="portfolio-caption-subheading text-muted">I interned at Nestlé USA as a Data Scientist.<br><br><b>Increased demand prediction accuracy by 9.4%.<br>Cost savings of $3.4 million.</b></div>
+                                <div class="portfolio-caption-subheading text-muted">I interned as a Data Scientist at Nestlé USA .<br><br><b>Increased demand prediction accuracy by 9.4%.<br>Cost savings of $3.4 million.</b></div>
                             </div>
                         </div>
                     </div>
@@ -192,9 +192,9 @@
                                 <img class="img-fluid" src="assets/images/portfolio/google/google.jpg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Scoring Q&A algorithms
+                                <div class="portfolio-caption-heading">NLP: Scoring Q&A algorithms
                                     </div>
-                                <div class="portfolio-caption-subheading text-muted">Google Research<br>Question-Answering Labelling Competition<br><br><b>Deep learning for Natural Language Processing.LEADERBOARD SCORE</b></div>
+                                <div class="portfolio-caption-subheading text-muted">Competed in Google Research's<br>Question-Answering Labelling Competition<br><br><b>Top 15% out of 1571 participants.</b></div>
                             </div>
                         </div>
                     </div>
@@ -205,11 +205,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/5.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/images/portfolio/funnel/funnel.jpeg" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Southwest</div>
-                                <div class="portfolio-caption-subheading text-muted">Website Design</div>
+                                <div class="portfolio-caption-heading">Predicting prospect conversion</div>
+                                <div class="portfolio-caption-subheading text-muted">I worked as a Student Machine Learning Engineer<br>at Funnel, an AI start-up in NYC.<br><br><b>50% increase in successful prospect conversions.</b></div>
                             </div>
                         </div>
                     </div>
@@ -322,12 +322,12 @@
                         <div class="modal-body">
                             <!-- Project details-->
                             <h2 class="text-uppercase">Forecasting Apple's Supply Chain Costs</h2>
-                            <h3 class="text-warning">Built ARIMA time-series models with < 0.1% MAPE</h3>
+                            <h3 class="text-warning">ARIMA</h3>
                             <p class="item-intro text-muted">Desktop application that uses ARIMA models to predict cost and detect errors.<br>Data visualisation dashboarding on Tableau to depict costs across components and time.<br><b>Cost savings of $20 million yearly.</b></p>
                 
-                            <a href="https://github.com/sheilateozy/Apple_Forecasting-Supply-Chain-Costs" class="btn btn-primary btn-xl text-uppercase" type="button">
-                                View on GitHub ☻
-                            </a>
+                            <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                <a href="https://github.com/sheilateozy/Apple_Forecasting-Supply-Chain-Costs" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
+                            </button>
                             <br>
                             <br>
                             <br>
@@ -336,8 +336,10 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8" style="text-align:justify";>
                                     <h3 style="text-align:left;">About</h3>
-                                        <p>I spent a semester working as a Student Data Scientist at Apple. Apple purchases components parts for its products from third party suppliers. The prices of these parts can be volatile at times due to trends and seasonalities, which snowballs into significant supply chain cost impacts.<br><br>
-                                            My project uses ARIMA models to predict a reasonable cost range for hundreds of parts in each month. These models work in the back-end of the following desktop application:</p>
+                                        <p>I worked as a Student Data Scientist at Apple, in a team of 5 students from Columbia Engineering.</p>
+                                        
+                                        <p>Apple purchases components parts for its products from third party suppliers. The prices of these parts can be volatile at times due to trends and seasonalities, which snowballs into significant supply chain cost impacts.<br><br>
+                                            Our project uses ARIMA models to predict a reasonable cost range for hundreds of parts in each month. These models work in the back-end of the following desktop application:</p>
                                             <center><img class="img-fluid" src="assets/images/portfolio/apple/desktop_application.png"></center>
                                         <p>The application takes in data on component part costs, in both Excel and CSV formats. Upon running the ARIMA models, it then flags out warnings for component parts whose costs are higher than they should be, and produces analysis reports explaining the likely reasons behind the cost spike.<br><br>
                                             This is used in real-time to catch areas in which Apple may be overpaying in its supply chain, or used on an ex-ante basis to negotiate future part costs with suppliers.</p>
@@ -353,13 +355,21 @@
                                         <center><img class="img-fluid" src="assets/images/portfolio/apple/data_simulation.png"></center>
                                         
                                         <h4 style="text-align:left;">2. Tune ARIMA using grid search</h4>
-                                        <p>I build one ARIMA model for each component part's cost. As such, 768 models are built. For each model, grid search for its optimal ARIMA (p, d, q) hyperparameters, determined by the lowest MAPE on a left-out test set.</p>
+                                        <p>We build one ARIMA model for each component part's cost. As such, 768 models are built. For each model, grid search for its optimal ARIMA (p, d, q) hyperparameters, determined by the lowest MAPE on a left-out test set.</p>
 
                                         <h4 style="text-align:left;">3. Make predictions with prediction intervals</h4>
                                         <p>When predicting the cost of a component part for the next month, apart from simply outputting cost predictions, calculate a 95% confidence interval for the prediction. This serves as a reasonable cost range for the part. Below is a graphical illustration, where the cost range is shown as a shaded grey area.</p>
                                         <center><img class="img-fluid" src="assets/images/portfolio/apple/prediction.png"></center>
+                                    <br>
+                                    <br>
+                                    <h3 style="text-align:left;">Still curious?</h3>
+                                    <p>My team made a presentation to Apple management, and you can check out our slides below.</p>
 
                                     <center>
+                                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                            <a href="https://github.com/sheilateozy/Apple_Forecasting-Supply-Chain-Costs/blob/main/presentation_slides/presentation_slides.pdf" style="text-decoration: none; color: white;" target="_blank">Presentation Slides</a>
+                                        </button>
+
                                         <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                             <i class="fas fa-xmark me-1"></i>
                                             Close Project
@@ -381,7 +391,7 @@
                     <div class="modal-body">
                         <!-- Project details-->
                         <h2 class="text-uppercase">Spotify competition:<br>Predicting sequential track-skipping</h2>
-                        <h3 class="text-warning">Built XGBoost with 76.8% accuracy</h3>
+                        <h3 class="text-warning">XGBoost</h3>
                         <p class="item-intro text-muted">
                             Windowed feature engineering for sequential information.<br>
                             Regularized k-fold target encoding of categorical features.<br>
@@ -389,10 +399,9 @@
                             Threshold-moving to minimize expected costs in real-world model deployment.<br>
                             <b>Top 7% out of 1350 participants.</b></p>
 
-
-                        <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping" class="btn btn-primary btn-xl text-uppercase" type="button">
-                            View on GitHub ☻
-                        </a>
+                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                            <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
+                        </button>
                         <br>
                         <br>
                         <br>
@@ -406,27 +415,6 @@
                                     <br><br>
                                     In the Spotify Sequential Skip Prediction Challenge, I explore this important and understudied problem in music streaming by building a model that predicts whether a user will skip or listen to tracks that they are streamed, given their immediately preceding interactions in a listening session. The model's accuracy score of 76.8% places in the top 7% on the challenge leaderboard, out of 1350 participants.</p>
                                     <br>
-
-                                    <h3 style="text-align:left;">One cool takeaway:<br>Threshold-moving for real-world model deployment</h3>
-                                        <p style="text-align:justify;">As opposed to simply using the default decision threshold of 0.5 to classify a positive condition, threshold-moving is important in the real-world deployment of models.
-                                            The default threshold of 0.5 will only be optimal if the business costs of a False Negative (FN) and a False Positive (FP) are equal. However, this is rarely the case in reality.
-                                            <br><br>In this project, an FP occurs when a song is identified to be skipped and thus not recommended to a user, but in
-                                            fact would not have been skipped. Hence, costs are incurred due to the user not being
-                                            exposed to a song he would have enjoyed. However, this presents a relatively lower cost to
-                                            Spotify since user satisfaction is unaffected. 
-                                            <br><br>On the other hand, a FN occurs when a song identified to not be skipped is in fact skipped by a
-                                            user. Costs are incurred due to lower user satisfaction with the streaming service. This presents a
-                                            much higher cost to Spotify. As such, the costs of FP and FN are unequal.
-                                            <br><br>I assume that a FN generates twice the cost of a FP for
-                                            Spotify. For each decision threshold, I obtain the resulting confusion matrix and subsequently
-                                            compute expected costs as 2𝐹𝑁 + 𝐹𝑃, resulting in the below graph:</p>
-                                        <br>
-                                        <center><img class="img-fluid" src="assets/images/portfolio/spotify/threshold_moving.png"></center>
-                                        <br>
-                                        <p style="text-align:justify;">The optimal threshold is the one resulting in
-                                            the minimum expected cost. This optimal threshold is found to be 0.2655, ie. a track is classified to be skipped as long
-                                            as its predicted probability from the final XGBoost model is above 0.2655. </p>
-                                        <br>
 
                                     <h3 style="text-align:left;">Project Methodology</h3>
                                         <br>
@@ -478,7 +466,7 @@
                                         
                                         <br><br>
 
-                                         <h4 style="text-align:left;">4. Tune XGBoost using Bayesian Optimization</h4>
+                                         <h4 style="text-align:left;">4. Train & tune XGBoost using Bayesian Optimization</h4>
                                             <p style="text-align:justify;">I utilize a Bayesian Optimization search method with stratified 5-fold cross validation in order to obtain the
                                             optimal hyperparameters in the most efficient manner. 
                                             <br><br>This is as compared to using simpler
@@ -490,16 +478,40 @@
                                          </p>
                                          <br>
 
+                                    <h3 style="text-align:left;">One cool takeaway:<br>Threshold-moving for real-world model deployment</h3>
+                                        <p style="text-align:justify;">As opposed to simply using the default decision threshold of 0.5 to classify a positive condition, threshold-moving is important in the real-world deployment of models.
+                                            The default threshold of 0.5 will only be optimal if the business costs of a False Negative (FN) and a False Positive (FP) are equal. However, this is rarely the case in reality.
+                                            <br><br>In this project, an FP occurs when a song is identified to be skipped and thus not recommended to a user, but in
+                                            fact would not have been skipped. Hence, costs are incurred due to the user not being
+                                            exposed to a song he would have enjoyed. However, this presents a relatively lower cost to
+                                            Spotify since user satisfaction is unaffected. 
+                                            <br><br>On the other hand, a FN occurs when a song identified to not be skipped is in fact skipped by a
+                                            user. Costs are incurred due to lower user satisfaction with the streaming service. This presents a
+                                            much higher cost to Spotify. As such, the costs of FP and FN are unequal.
+                                            <br><br>I assume that a FN generates twice the cost of a FP for
+                                            Spotify. For each decision threshold, I obtain the resulting confusion matrix and subsequently
+                                            compute expected costs as 2𝐹𝑁 + 𝐹𝑃, resulting in the below graph:</p>
+                                        <br>
+                                        <center><img class="img-fluid" src="assets/images/portfolio/spotify/threshold_moving.png"></center>
+                                        <br>
+                                        <p style="text-align:justify;">The optimal threshold is the one resulting in
+                                            the minimum expected cost. This optimal threshold is found to be 0.2655, ie. a track is classified to be skipped as long
+                                            as its predicted probability from the final XGBoost model is above 0.2655. </p>
+                                    <br>
+
                                     <h3 style="text-align:left;">Still curious?</h3>
                                     <p style="text-align:justify;">I authored a research paper covering the details of my methodology and findings when I took a PhD-level Machine Learning class at Columbia. This paper was awarded the top mark in the class (full-mark grade).</p>
-                                    <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping/blob/main/research_paper/research_paper.pdf" class="btn btn-primary btn-xl text-uppercase" type="button">
-                                        Read the paper
-                                    </a>
+                                    
+                                    <center>
+                                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                            <a href="https://github.com/sheilateozy/Spotify_Predicting-Track-Skipping/blob/main/research_paper/research_paper.pdf" style="text-decoration: none; color: white;" target="_blank">Read the paper</a>
+                                        </button>
 
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
-                                    </button>
+                                        <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                            <i class="fas fa-xmark me-1"></i>
+                                            Close Project
+                                        </button>
+                                    </center>
                                 </div>
                             </div>
                         </div>
@@ -524,9 +536,9 @@
                             Data visualisation dashboarding on Microsoft Power BI to depict business impact of new models.<br>
                             <b>Increased demand prediction accuracy by 9.4% from existing models.</b></p>
 
-                            <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand" class="btn btn-primary btn-xl text-uppercase" type="button">
-                                View on GitHub ☻
-                            </a>
+                            <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
+                            </button>
                             <br>
                             <br>
                             <br>
@@ -535,7 +547,7 @@
                                 <div class="row justify-content-center">
                                     <div class="col-lg-8" style="text-align:justify;">
                                         <h3 style="text-align:left;">About</h3>
-                                            <p>I interned as a Data Scientist at Nestlé USA on the Supply Chain Analytics team, which utilizes Data Science to forecast demand for hundreds of thousands of Nestlé’s products. My work involved improving their existing demand forecasting models through 3 aspects, as follows:</p>
+                                            <p>I interned as a Data Scientist at Nestlé USA on the Supply Chain Analytics team, which uses Data Science to forecast demand for hundreds of thousands of Nestlé’s products. My work involved improving their existing demand forecasting models through 3 aspects, as follows:</p>
                                             <br>
                                             <h4 style="text-align:left;">1. Feature selection tool: Recursive Feature Elimination</h4>
                                                 <p>Nestlé collects an enormous amount of data, such as demand data, promotional data, holiday data, and competitor data. With this large amount of features available to be used for modelling, the team required a robust feature selection tool. 
@@ -573,15 +585,7 @@
                                             <p>This translates into cost savings of $3.4 million across the various categories:</p>
                                             <center><img class="img-fluid" src="assets/images/portfolio/nestle/cost_savings.png"></center>
                                         <br>
-
-                                        <h3 style="text-align:left;">One cool takeaway:<br>Reducing bias in permutation feature importance in the presence of highly collinear features</h3>
-                                            <p>Permutation feature importance is touted as the gold-standard method for obtaining true feature importances. This is as opposed to other methods such as impurity-based feature importances which tend to inflate the importance of continuous or high-cardinality categorical variables (Read more about this here! <a href="https://explained.ai/rf-importance/index.html#3">Beware Default Random Forest Importances</a>).
-                                                It works by randomly shuffling (permutating) each feature such that the relationship between that feature and the target is broken. With this relationship now broken, we use the same model to predict the target. The importance of the feature is then measured as the fall in accuracy of the model from before and after it was permuted.</p>
-
-                                            <p>However, trouble sets in when there exists highly collinear features in the data. In this case, permutating one feature will have little effect on the models performance because it can get the same information from a correlated feature. This leads to the traditional permutation feature importance method understating the importance of such features.</p>
-                                        
-                                            <p>To overcome this problem, I group features that are collinear and permute them together as a meta-feature. This allows me to obtain the true unbiased importance of highly collinear features as a group.</p>
-                                            <br>
+                                        <br>
                                     
                                         <h3 style="text-align:left;">Project Methodology</h3>
                                             <br>
@@ -594,7 +598,7 @@
                                                 <p>The categorical variables in the dataset are of high cardinality. As such, I utilize Hash Encoding, which reduces the number of new features created from the encoding to a lower dimension.
                                                     This dimension is chosen from a trade-off: The larger the number of dimensions, the more information we retain from the original categorical feature after encoding it. However, this also results in sparser feature matrices that may reduce the performance of any machine learning model.</p>
 
-                                            <h4 style="text-align:left;">3. Tune Random Forest using random search</h4>
+                                            <h4 style="text-align:left;">3. Tune Random Forest using Random Search</h4>
                                                 <p>Use Apache Spark backend to conduct this random search in parallel for faster runtime.</p>
 
                                             <h4 style="text-align:left;">4. Obtain unbiased permutation feature importances</h4>
@@ -615,19 +619,28 @@
                                                 
                                             <h4 style="text-align:left;">8. Repeat for different models to determine optimal model</h4>
                                                 <p>Machine learning is an iterative process. I explore the following models to determine the best for this project's use-case: Elastic Net, Random Forest, XGBoost, Deep Neural Network. </p>
+                                    <br>
+
+                                    <h3 style="text-align:left;">One cool takeaway:<br>Reducing bias in permutation feature importance in the presence of highly collinear features</h3>
+                                        <p>Permutation feature importance is touted as the gold-standard method for obtaining true feature importances. This is as opposed to other methods such as impurity-based feature importances which tend to inflate the importance of continuous or high-cardinality categorical variables (Read more about this here! <a href="https://explained.ai/rf-importance/index.html#3">Beware Default Random Forest Importances</a>).
+                                            It works by randomly shuffling (permutating) each feature such that the relationship between that feature and the target is broken. With this relationship now broken, we use the same model to predict the target. The importance of the feature is then measured as the fall in accuracy of the model from before and after it was permuted.</p>
+
+                                        <p>However, trouble sets in when there exists highly collinear features in the data. In this case, permutating one feature will have little effect on the models performance because it can get the same information from a correlated feature. This leads to the traditional permutation feature importance method understating the importance of such features.</p>
                                     
+                                        <p>To overcome this problem, I group features that are collinear and permute them together as a meta-feature. This allows me to obtain the true unbiased importance of highly collinear features as a group.</p>
+                                    <br>
 
                                     <h3 style="text-align:left;">Still curious?</h3>
                                         <p>I authored an internship report covering the details of my methodology, and also made a presentation to Nestlé management.</p>
 
                                     <center>
-                                        <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand/blob/main/internship_report/internship_report.pdf" class="btn btn-primary btn-xl text-uppercase" type="button">
-                                            Read the report
-                                        </a>
+                                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                            <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand/blob/main/internship_report/internship_report.pdf" style="text-decoration: none; color: white;" target="_blank">Read the report</a>
+                                        </button>
 
-                                        <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand/blob/main/presentation_slides/presentation_slides.pdf" class="btn btn-primary btn-xl text-uppercase" type="button">
-                                            Presentation slides
-                                        </a>
+                                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                            <a href="https://github.com/sheilateozy/Nestle-_Forecasting-Product-Demand/blob/main/presentation_slides/presentation_slides.pdf" style="text-decoration: none; color: white;" target="_blank">Presentation slides</a>
+                                        </button>
 
                                         <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
                                             <i class="fas fa-xmark me-1"></i>
@@ -642,34 +655,109 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 4 modal popup-->
+        <!-- Page 4: Google -->
         <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/icons/close.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/4.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Lines
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Branding
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                    <h2 class="text-uppercase">NLP: Scoring Q&A algorithms</h2>
+                                    <h3 class="text-warning">Bi-Directional LSTM with Convolutional Layers</h3>
+                                    <p class="item-intro text-muted">
+                                        Deep learning using Keras, PyTorch.<br>
+                                        Multi-target task: Predict 30 targets using 1 model.<br>
+                                        Text embeddings extraction using GloVE, BERT.<br>
+                                        <b>Top 15% out of 1571 participants.</b></p>
+
+
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        <a href="https://github.com/sheilateozy/Google_Scoring-QA-Algorithms" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
                                     </button>
+                                    <br>
+                                    <br>
+                                    <br>
+        
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8" style="text-align:justify;">
+                                                <h3 style="text-align:left;">About</h3>
+                                                    <p>Question-answering is a discipline within the field of natural language processing that is concerned with building systems that automatically answer questions posed by humans in a natural language.</p>
+
+                                                    <p>This project builds a deep learning model that predicts the quality of automated answers to human-posed questions, taking only text features of the question title, question body, and answer.</p>
+                                                <br>  
+                                                <br>
+                                                <h3 style="text-align:left;">Project Methodology</h3>
+                                                <br>
+                                                    <h4 style="text-align:left;">1. Preprocess text features</h4>
+                                                        <p> 
+                                                        ▪ Convert all text to lowercase<br>
+                                                        ▪ Separate joined words commonly used in speech. For instance, “I’m” is separated into “I am”<br>
+                                                        ▪ Remove punctuation<br>
+                                                        ▪ Remove stop words 
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">2. Create numeric representations for text features</h4>
+                                                        <p>One of the main design decisions when building a deep learning model with text data is the question of whether to utilize pre-trained word embeddings or to construct an embedding layer within the model to be trained from scratch with respect to the problem at hand.
+                                                        Since the dataset available for this task is relatively small with 10,000 rows, I choose to employ the transfer learning method instead of training my own.
+                                                        I explore 2 state-of-the-art pre-trained algorithms for this: GloVe and BERT.</p>
+
+                                                        <h4 style="text-align:center;">2.1. GloVE (Global Vectors for Word Representation)</h4>
+                                                            <p>GloVE is a pre-trained word embedding algorithm trained on Wikipedia and Gigaword data. The advantage of GloVe lies in its utilization of both local statistics (local context information of words) and global statistics (word co-occurrence) to obtain word embeddings.</p>
+                                                            <p>I first tokenize and pad all text using Keras’ Tokenizer class. Within the subsequent model architecture, I replace the parameters of the embedding layer with these pre-trained embeddings and freeze the layer, preventing its weights from being updated during model training.
+                                                                Importantly, since the test set must remain unseen to avoid introducing bias, I utilize the same tokenizer trained on the training set in order to tokenize words in the test set. This implies that words found only in the test set and not the training set cannot be embedded, and have their embeddings set to 0. I also pad to the same length and specifications as the training set.</p>
+
+                                                        <h4 style="text-align:center;">2.2. BERT (Bidirectional Encoder Representations from Transformer)</h4>
+                                                            <p>BERT is a pre-trained language model created at Google that applies the bidirectional training of transformers to language modelling, allowing for a deeper sense of language context. Traditional single-direction language models produce a fixed representation for a word regardless of the context within which the word appears. In contrast, BERT’s representations for words are dynamically informed by the words around them.</p>
+                                                            <p>I follow a strategy proposed by BERT’s original creators: I first pass the dataset’s text data into the pre-trained BERT model and obtain the weights on its last 4 hidden layers. The summation of these weights is then used as input features for the subsequent deep learning model. These were conducted using PyTorch with the Hugging Face library.</p>
+
+                                                    <h4 style="text-align:left;">3. Model architecture: LSTM with Convolutional layers</h4>
+                                                        <p>There exists many different model architectures possible for this prediction task. In order to determine the optimal architecture, I took inspiration from the winners of similar competitions on Kaggle. In particular, I experiment with the model architecture used by the winner of a recent NLP competition held by Quora:</p>
+                                                        <center><img class="img-fluid" src="assets/images/portfolio/google/model_architecture.png"></center>
+
+                                                        <p>Importantly, I choose a combination of both convolutional and LSTM layers, an increasingly popular model architecture in text modelling. The presence of both types of layers builds a network that is able to utilize both spatial and temporal information. Specifically, the convolutional layer extracts spatially-aware features from word embedding inputs and the subsequent LSTM layer interprets these features across time.</p>
+
+                                                    <h4 style="text-align:left;">4. Model tuning: Increase model regularization</h4>
+                                                        <p>
+                                                        ▪ Increase traditional dropout<br>
+                                                        ▪ Add recurrent dropout to LSTM layer in order for recurrent weights to be additionally regularized
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">5. Model tuning: Increase model complexity</h4>
+                                                        <p>
+                                                        ▪ Increase number of convolutional layers from 1 to 2<br>
+                                                        ▪ Increase number of LSTM layers from 1 to 3<br>
+                                                        ▪ Tune learning rate used under the Adam optimizer to determine an optimal value
+                                                        </p>
+                                                <br>
+
+                                                <h3 style="text-align:left;">One cool takeaway:<br>Selecting optimal loss function under multi-target task</h3>
+                                                    <p>For each question-answer pair, the 30 targets to be predicted are the quality of the question and answer along 30 different metrics, as follows:</p>
+                                                    <center><img class="img-fluid" src="assets/images/portfolio/google/targets.png"></center>
+
+                                                    <p>At first glance, since the 30 targets are each scored between 0 and 1, the immediate impression is that all 30 targets are continuous. However, investigating the targets using a boxplot reveals the following:</p>
+                                                    <center><img class="img-fluid" src="assets/images/portfolio/google/targets_boxplot.png"></center>
+                                                    <p>10 of these targets take on less than 10 unique values each. This indicates that these 10 targets should instead be regarded as categorical instead of continuous, contrary to the initial impression that all 30 targets are continuous.</p>
+                                                    
+                                                    <p>In light of this, I implement the binary cross-entropy loss for my model, due to:
+                                                        <li>As mentioned, 10 of the 30 targets should instead be regarded as categorical instead of continuous. This lends strength towards utilizing binary cross-entropy loss instead of regression-based losses.</li>
+                                                        <br>
+                                                        <li>More importantly though, all the targets have a value of between 0 and 1. As such, they can be treated akin to probabilities under categorical target prediction. The usage of binary cross-entropy loss ensures that predictions for these target values remain between the range of 0 and 1, as compared to using traditional regression-based losses which will not.</li></p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Still curious?</h3>
+                                                <p>I authored a research paper covering the details of my methodology and findings when I took a PhD-level Deep Learning class at Columbia.</p>
+        
+                                            <center>
+                                                <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                                    <a href="https://github.com/sheilateozy/Google_Scoring-QA-Algorithms/blob/main/research_paper/research_paper.pdf" style="text-decoration: none; color: white;" target="_blank">Read the paper</a>
+                                                </button>
+        
+                                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                                    <i class="fas fa-xmark me-1"></i>
+                                                    Close Project
+                                                </button>
+                                            </center>
                                 </div>
                             </div>
                         </div>
@@ -677,34 +765,209 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 5 modal popup-->
+        <!-- Page 5: Funnel-->
         <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/icons/close.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/5.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Southwest
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Website Design
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                    <h2 class="text-uppercase">Predicting Funnel's prospect conversion</h2>
+                                    <h3 class="text-warning">Logistic Regression, CatBoost, XGBoost</h3>
+                                    <p class="item-intro text-muted">
+                                        Unique modelling approach of building 1 model per stage of prospect journey.<br>
+                                        Extensive feature engineering from working with business stakeholders to obtain domain knowledge.<br>
+                                        Tailored machine learning metrics to business goals.<br>
+                                        Black-box model explanation using SHAP (SHapley Additive exPlanations).<br>
+                                        <b>50% increase in successful prospect conversions.</b>
+                                    </p>
+
+
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        <a href="________" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
                                     </button>
+                                    <br>
+                                    <br>
+                                    <br>
+        
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8" style="text-align:justify;">
+                                                <h3 style="text-align:left;">About</h3>
+                                                    <p>I worked as a Student Machine Learning Engineer at Funnel, as part of a team of 5.
+                                                        Our team consisted of 2 students from Columbia Engineering and 3 MBA students from Columbia Business School, coming together to tackle a real-world business problem at Funnel.
+                                                    </p>
+
+                                                    <p>
+                                                        Funnel provides property management software whose target group are leasing agents. 
+                                                        Leasing agents use their software to keep track of prospective renters who express interest in the properties they manage.
+                                                    </p>
+
+                                                    <p>Our project involves creating a machine learning model that scores prospective renters in terms of their conversion rate, ie. probability of eventually renting from the leasing agent.</p>
+                                                        
+                                                    <p>Prior to this project, leasing agents who use Funnel's software have no predetermined method of filtering through hundreds of new prospective renters that come in everyday, in deciding which ones are more important to follow up on.
+                                                        This project aims to enhance the software's capabilities by integrating this machine learning model into its system. With this, all prospective renters that express interest will be ranked by likely conversion rate and leasing agents
+                                                        can then prioritize them accordingly to help maximise conversion results. This increase the utility that Funnel's software provides to leasing agents.</p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Results: Making an impact at Funnel</h3>
+                                                    <p>In total, we built 3 models that each predicts a prospective renter's conversion rate at a distinct point of their journey.
+                                                        The models have an ROC-AUC of 91%, 60%, and 66% respectively. 
+                                                        This means that the first model ranks 91% of prospective renters correctly in terms of their conversion rate. 
+                                                        This leads to:
+                                                    </p>
+                                                    
+                                                    <p>
+                                                        <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">Time savings</span> of 250 hours a year from leasing agents having to manually go through each new prospect before deciding who to reach out to.<br>
+                                                        <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">50% increase in successful rents</span> by leasing agents who are able to go after the most lucrative prospects from the get-go.<br>
+                                                        <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">30% increase in Funnel's software functionality</span> thus enhancing its utility to leasing agents.
+                                                    </p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Data</h3>
+                                                    <p>This project uses 60 million records with 400+ features that contain information about properties, prospective renters, and their interactions with leasing agents.</p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Project Methodology</h3>
+                                                <br>
+                                                    <h4 style="text-align:left;">1. Data exploration: Data characteristics unique to this project</h4>
+                                                        <p>Investigations reveal a special characteristic of the data, unique to the context of this project: 
+                                                            Different types of data are obtained regarding a prospective renter at distinct points in time of the prospect's journey with a leasing agent. 
+                                                            Specifically, more data is obtained as this journey progresses through the following stages:</p>
+                                                            
+                                                        <h5 style="text-align:center;">Stage 1: Prospect creation</h5>
+                                                            <p>This stage occurs when a new prospective renter first expresses interest in a property. Here, the prospect has just entered into our database and we possess only basic information on them, such as:<br>
+                                                                ▪ Prospective renter data: Age, Gender, ...<br>
+                                                                ▪ Source data: How the prospective renter heard about the property<br>
+                                                                ▪ Property data: Data on the property that the prospective renter expressed interest in<br>
+                                                            </p>
+                                                        
+                                                        <h5 style="text-align:center;">Stage 2: Communication</h5>
+                                                        <p>This stage occurs when the leasing agent and prospective renter subsequently start to exchange more and more communications. Over time, more data is accumulated on these interactions, such as:<br>
+                                                            ▪ Medium of communications: Call, Email, Text, ...<br>
+                                                            ▪ Number of communications per medium<br>
+                                                            ▪ Reply speed of prospective renter<br>
+                                                        </p> 
+
+                                                        <h5 style="text-align:center;">Stage 3: Property Viewing</h5>
+                                                        <p>This stage occurs when the prospective renter tours their property of interest. Here, we further obtain data on viewings, such as:<br>
+                                                            ▪ Medium of viewing: In-person, Video call<br>
+                                                            ▪ Speed of scheduling a viewing<br>
+                                                            ▪ Outcome of viewing: Deposit put down, Deposit not put down<br>
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">2. Make modelling decisions: Build 1 model per stage of prospective renter's journey</h4>
+                                                        <p>Given the above, instead of creating one overarching model, we develop a three-model approach, to be respectively used at each stage of the prospective renter's journey, where we procure new data. 
+                                                            Each subsequent model uses more features than the last, since it uses the data of its preceding models, as well as the new data that comes in.</p>
+
+                                                            <h5 style="text-align:center;">Model 1: Used on prospective renters at prospect creation stage</h5>
+                                                            <h5 style="text-align:center;">Model 2: Used on prospective renters at communication stage</h5>
+                                                            <h5 style="text-align:center;">Model 3: Used on prospective renters at property viewing stage</h5>
+                                                        <br>
+                                                        <p>Modelling in this manner has an important implication: We group prospective renters in each of the 3 stages of their journey.
+                                                            For each stage, the corresponding model predicts conversion rate for only propective renters currently in that stage.
+                                                            A higher predicted conversion rate in one stage would mean that that prospective renter is more likely to convert, out of all the other prospects in that same stage as him. 
+                                                            The leasing agent should therefore prioritize following up on him, as opposed to other prospects in the same stage.</p>
+
+                                                        <p>This runs opposite to the alternative modelling approach, which is to lump all prospective renters together, regardless of journey stage, 
+                                                            and run an overarching model on all of them to obtain predicted conversion rates. This approach is far less useful, since it is clear
+                                                            that the model would always predict a higher conversion rate to prospective renters in the later stages compared to former stages. 
+                                                            Such information is unhelpful since one would be able to deduce this intuitively without the help of machine learning.</p>
+
+                                                        <p>As such, the modelling decisions made in this project were carefully designed to provide the maximal utility possible to a leasing agent using Funnel's software,
+                                                            in particular to provide him information that he would not have been able to deduce without the help of machine learning.</p>
+
+                                                    <h4 style="text-align:left;">3. Feature selection: 400 to 50 features</h4>
+                                                        <p>Since the dataset contains 400+ features, feature selection becomes imperative. This is because using a large number of features in modelling can lead to:<br>
+                                                            ▪ Slow model training<br>
+                                                            ▪ Large disk memory required for training<br>
+                                                            ▪ Model performance degredation, in cases where many uninformative features are present<br>
+                                                            We thus select features by looking at their Permutation Importance in a CatBoost model, resulting in a final subset of ~50 features.
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">4. Feature engineering</h4>
+                                                        <p>Hypothesizing that feature engineering would be key in model performance for this project,
+                                                            we worked extensively with business stakeholders in Funnel to obtain domain knowledge behind each feature.
+                                                            This allowed us to engineer useful features to provide greater signal to our model, such as:<br>
+                                                            ▪ Creating time differences between when a prospective renter reaches out to a leasing agent and when the leasing agent replies<br>
+                                                            ▪ Text analysis on conversations between a prospective renter and leasing agent: Length of text, text content, ... 
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">5. Train & tune models using Bayesian Optimization: Logistic Regression, CatBoost, XGBoost</h4>
+                                                        <p>We benchmark the above suite of models. 
+                                                            Importantly, we choose to explore CatBoost since the final subset of features selected for modelling contains many categorical features.
+                                                            CatBoost provides in-built categorical feature encoding, thus cutting down on significant time required for such encoding tasks prior to model building.
+                                                            Additionally, the dataset is extremely large, with 60 million rows. This puts an extra strain on computational time for model building. 
+                                                            CatBoost has been shown to be 8x faster than the state-of-the-art XGBoost, which again suits the nature of this project. 
+                                                        </p>
+
+                                                        <p>Read more about CatBoost here: 
+                                                            <a href="https://neptune.ai/blog/when-to-choose-catboost-over-xgboost-or-lightgbm" style="color: black;" target="_blank">CatBoost VS XGBoost VS LightGBM</a>,
+                                                            <a href="https://hanishrohit.medium.com/whats-so-special-about-catboost-335d64d754ae" style="color: black;" target="_blank">What's so special about CatBoost?</a>
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">6. Obtain SHAP feature importances</h4>
+                                                        <p>Apart from building a highly performing machine learning model, another key aspect of this project is to investigate which variables contribute the most to a prospective renter's conversion rate, 
+                                                            as well as the direction of its contribution (does a greater value for the feature increase or decrease conversion rate).
+                                                        </p>
+
+                                                        <p>Traditional impurity-based or permutation-based feature importance methods are unable to give this direction of contribution. As such, I utilize SHapley Additive exPlanations (SHAP) feature importances, which uses game theory in its computations.
+                                                        </p>
+
+                                                        <p>We obtain the following SHAP feature importance plot depicting the most important features:</p>
+                                                        <center><img class="img-fluid" src="assets/images/portfolio/funnel/shap_feature_importance.png"></center>
+                                                        
+
+                                                        <p>Each point on the below plot is a Shapley value for a feature and a prospective renter. 
+                                                            The Shapley value is the weighted average contribution of a feature value to the prediction. 
+                                                            It relates to convertion rate as follows: Positive Shapley values indicate a conversion rate of more than 0.5 and negative Shapley values indicate a conversion rate of less than 0.5.
+                                                            The position on the y-axis is determined by the feature and on the x-axis by the Shapley value. 
+                                                            The color represents the value of the feature from low to high.  
+                                                            Lastly, the features are ordered according to their importance.
+                                                            This plot therefore answers the required questions we set out to investigate about feature importances.
+                                                        </p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">One cool takeaway:<br>Using ROC-AUC to tailor metrics to business goals</h3>
+                                                    <p>Machine learning models can be measured across a suite of metrics.
+                                                        In order to make modelling decisions that push my project towards attaining its business goals, I specifically tailor the metric used in modelling (hyperparameter tuning, model selection) to these goals.
+                                                        We choose the ROC-AUC (Area under the ROC curve) due to 3 key reasons:</p>
+
+                                                    <h4 style="text-align:left;">1. Ranking</h4>
+                                                        <p>Funnel aims to use the models built to rank prospective renters in terms of conversion rate, in order for leasing agents to prioritize them accordingly.
+                                                            This immediately ties into ROC-AUC, since it measures model performance as the percentage of prospective renters that are correctly ranked by the model in terms of their conversion rate.
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">2. Choice of curves: ROC VS PRC</h4>
+                                                        <p>For binary classification tasks, the typical choice is between the Receiver Operating Curve (ROC) and Precision-Recall Curve (PRC).
+                                                            The ROC curve plots True Positive Rate against False Positive Rate and takes into account model performance on both the True Positive and True Negative classes.
+                                                            On the other hand, the PRC curve plots Precision against Recall, both of which are metrics that do not take into account the True Negative condition. As such, it takes into account model performance on only the True Positive class.
+                                                        </p>
+
+                                                        <p>In this project, it is equally important to catch a prospective renter who will rent (True Positive), as well as a prospective renter who will not rent (True Negative).
+                                                            This is because the leasing agent can utilize different engagement strategies for each. 
+                                                            Thus, we decide to use the ROC curve.  
+                                                        </p>
+
+                                                    <h4 style="text-align:left;">3. Properties of AUC</h4>
+                                                        <p>A key property is that AUC is scale-invariant, ie. it measures how well conversion rates are ranked, rather than the absolute values of conversion rates.
+                                                            Since the business goal is to rank prospective renters, we are less concerned with obtaining an exact conversion rate per prospect, as opposed to
+                                                            obtaining a correct ranking for them. This presents another strong argument for using the AUC.</p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Still curious?</h3>
+                                                <p>My team made a presentation to Funnel, and you can check out our slides below.</p>
+        
+                                            <center>
+                                                <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                                    <a href="______" style="text-decoration: none; color: white;" target="_blank">Presentation Slides</a>
+                                                </button>
+        
+                                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                                    <i class="fas fa-xmark me-1"></i>
+                                                    Close Project
+                                                </button>
+                                            </center>
                                 </div>
                             </div>
                         </div>

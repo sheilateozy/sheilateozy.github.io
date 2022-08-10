@@ -99,27 +99,23 @@
             <div class="container">
                 <div class="text-center">
                     <h2 class="section-heading text-uppercase">Skills</h2>
+
+                    <head>
+                        <link rel="stylesheet"
+                              href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+                        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+                        <script>hljs.initHighlightingOnLoad();</script>
+                    </head>
                     
-                    <left>
-                        <pre class="s-code-block language-python">
-                            <code>
-                                if skills in ['Python', 
-                                              'R', 
-                                              'SQL', 
-                                              'Spark', 
-                                              'Scala', 
-                                              'Tableau', 
-                                              'Power BI', 
-                                              'Git', 
-                                              'Google Cloud', 
-                                              'Microsoft Azure']: 
-                                    knowledge = True 
+                    <body>
+                        <pre><code class="python" style="font-size:18px">
+                            if skills in ['Python', 'R', 'SQL', 'Spark', 'Scala', 'Tableau', 'Power BI', 'Git', 'Google Cloud', 'Microsoft Azure']: 
+                                knowledge = True 
                                 
-                                else: 
-                                    learns_fast = True
-                            </code>
-                        </pre>
-                    </left>
+                            else: 
+                                excited_to_learn = True
+                        </code></pre>
+                    </body>
                 </div>
             </div>
         </section>

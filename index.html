@@ -178,7 +178,7 @@
                             </a>
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">Forecasting product demand</div>
-                                <div class="portfolio-caption-subheading text-muted">I interned as a Data Scientist at Nestlé USA .<br><br><b>Increased demand prediction accuracy by 9.4%.<br>Cost savings of $3.4 million.</b></div>
+                                <div class="portfolio-caption-subheading text-muted">I interned as a Data Scientist at Nestlé USA.<br><br><b>Increased demand prediction accuracy by 9.4%.<br>Cost savings of $3.4 million.</b></div>
                             </div>
                         </div>
                     </div>
@@ -194,7 +194,7 @@
                             <div class="portfolio-caption">
                                 <div class="portfolio-caption-heading">NLP: Scoring Q&A algorithms
                                     </div>
-                                <div class="portfolio-caption-subheading text-muted">Competed in Google Research's<br>Question-Answering Labelling Competition<br><br><b>Top 15% out of 1571 participants.</b></div>
+                                <div class="portfolio-caption-subheading text-muted">Competed in Google Research's<br>Question-Answering Labelling Competition.<br><br><b>Top 15% out of 1571 participants.</b></div>
                             </div>
                         </div>
                     </div>
@@ -220,11 +220,11 @@
                                 <div class="portfolio-hover">
                                     <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
                                 </div>
-                                <img class="img-fluid" src="assets/img/portfolio/6.jpg" alt="..." />
+                                <img class="img-fluid" src="assets/images/portfolio/columbia/columbia.png" alt="..." />
                             </a>
                             <div class="portfolio-caption">
-                                <div class="portfolio-caption-heading">Window</div>
-                                <div class="portfolio-caption-subheading text-muted">Photography</div>
+                                <div class="portfolio-caption-heading">Predicting click-through rates</div>
+                                <div class="portfolio-caption-subheading text-muted">Competed in Columbia Engineering<br>competition open to Masters students.<br><br><b>Placed 4<sup>th</sup> out of 200 participants.</b></div>
                             </div>
                         </div>
                     </div>
@@ -354,8 +354,9 @@
                                         <p>Remove outliers in data to discard noise. Next, simulate data for component parts with lesser cost history data using a normal distribution with the same mean and variance as the available data.</p>
                                         <center><img class="img-fluid" src="assets/images/portfolio/apple/data_simulation.png"></center>
                                         
-                                        <h4 style="text-align:left;">2. Tune ARIMA using grid search</h4>
-                                        <p>We build one ARIMA model for each component part's cost. As such, 768 models are built. For each model, grid search for its optimal ARIMA (p, d, q) hyperparameters, determined by the lowest MAPE on a left-out test set.</p>
+                                        <h4 style="text-align:left;">2. Train &amp tune ARIMA hyperparameters using Grid Search</h4>
+                                        <p>We build one ARIMA model for each component part's cost. As such, 768 models are built. For each model, grid search for its optimal ARIMA (p, d, q) hyperparameters using k-fold cross-validation, 
+                                            where the optimal hyperparameters are determined by the lowest MAPE on a left-out test set.</p>
 
                                         <h4 style="text-align:left;">3. Make predictions with prediction intervals</h4>
                                         <p>When predicting the cost of a component part for the next month, apart from simply outputting cost predictions, calculate a 95% confidence interval for the prediction. This serves as a reasonable cost range for the part. Below is a graphical illustration, where the cost range is shown as a shaded grey area.</p>
@@ -441,14 +442,22 @@
 
                                         
                                         <h4 style="text-align:left;">2. Encode categorical features: Regularized k-fold target encoding</h4>
-                                            <p style="text-align:justify;">The usage of k folds ensures that the target value of
-                                            an observation is not used to compute its target-encoded predictors. Instead, other observations in the
-                                            training data are used. The dataset is first split into k folds, and the means for each category in the
-                                            𝑖^𝑡ℎ fold is computed using data in the other k-1 folds. 
-                                            <br><br>To further prevent overfitting, I additionally
-                                            add random noise into the target-encoded values for each category. This provides extra regularization
-                                            to the k-fold target encoding.
-                                        </p>
+                                            <p style="text-align:justify;">
+                                                Target Encoding is the substitution of a category with the mean target value for that category.
+                                                However, this introduces target leakage since the target-encoded value for an observation includes the effect of that observation's target value,
+                                                thus this encoded feature value for the observation has the target baked inside it. 
+                                            </p>
+
+                                            <p style="text-align:justify;">
+                                                K-Fold Target Encoding builds upon traditional Target Encoding by alleviating this issue. 
+                                                It ensures that the target value of an observation is not used to compute its target-encoded predictors. 
+                                                The dataset is first split into <i>k</i> folds, and the mean target value for each category in the <i>i<sup>th</sup></i> fold is computed using data in the other <i>k-1</i> folds. 
+                                            </p>
+
+                                            <p style="text-align:justify;">
+                                                The regularized aspect next comes into play to further prevent overfitting. 
+                                                In order to provide regularization, I additionally add random noise into the target-encoded values for each category.
+                                            </p>
 
                                         <h4 style="text-align:left;">3. Select metric of focus: F2-Score</h4>
                                             <p style="text-align:justify;">The metrics of particular significance in our specific business case are:</p>
@@ -466,8 +475,8 @@
                                         
                                         <br><br>
 
-                                         <h4 style="text-align:left;">4. Train & tune XGBoost using Bayesian Optimization</h4>
-                                            <p style="text-align:justify;">I utilize a Bayesian Optimization search method with stratified 5-fold cross validation in order to obtain the
+                                         <h4 style="text-align:left;">4. Train &amp tune XGBoost hyperparameters using Bayesian Optimization</h4>
+                                            <p style="text-align:justify;">I utilize a Bayesian Optimization search method with stratified k-fold cross validation in order to obtain the
                                             optimal hyperparameters in the most efficient manner. 
                                             <br><br>This is as compared to using simpler
                                             hyperparameter search methods such as Grid Search and Random Search, where each
@@ -589,7 +598,7 @@
                                     
                                         <h3 style="text-align:left;">Project Methodology</h3>
                                             <br>
-                                            <h4 style="text-align:left;">1. Feature engineering: Transform time-series problem into supervised learning problem</h4>
+                                            <h4 style="text-align:left;">1. Feature engineering: To extract time nature of data</h4>
                                                     <li style="text-align:left;">Lag variables of past demand and consumption information</li>
                                                     <li style="text-align:left;">Rolling mean and rolling standard deviation of existing features</li>
                                                     <li style="text-align:left;">Calendar signatures, eg. Week number in year</li>
@@ -598,8 +607,8 @@
                                                 <p>The categorical variables in the dataset are of high cardinality. As such, I utilize Hash Encoding, which reduces the number of new features created from the encoding to a lower dimension.
                                                     This dimension is chosen from a trade-off: The larger the number of dimensions, the more information we retain from the original categorical feature after encoding it. However, this also results in sparser feature matrices that may reduce the performance of any machine learning model.</p>
 
-                                            <h4 style="text-align:left;">3. Tune Random Forest using Random Search</h4>
-                                                <p>Use Apache Spark backend to conduct this random search in parallel for faster runtime.</p>
+                                            <h4 style="text-align:left;">3. Train &amp tune Random Forest hyperparameters using Random Search</h4>
+                                                <p>I utilize a Random Search method with 5-fold cross validation, conducted in parallel with Apache Spark backend for faster runtime.</p>
 
                                             <h4 style="text-align:left;">4. Obtain unbiased permutation feature importances</h4>
                                                 <p>Taking extra care to group highly collinear features together to obtain unbiased importances.</p>
@@ -702,12 +711,12 @@
                                                         Since the dataset available for this task is relatively small with 10,000 rows, I choose to employ the transfer learning method instead of training my own.
                                                         I explore 2 state-of-the-art pre-trained algorithms for this: GloVe and BERT.</p>
 
-                                                        <h4 style="text-align:center;">2.1. GloVE (Global Vectors for Word Representation)</h4>
+                                                        <h5 style="text-align:left;">2.1. GloVE (Global Vectors for Word Representation)</h4>
                                                             <p>GloVE is a pre-trained word embedding algorithm trained on Wikipedia and Gigaword data. The advantage of GloVe lies in its utilization of both local statistics (local context information of words) and global statistics (word co-occurrence) to obtain word embeddings.</p>
                                                             <p>I first tokenize and pad all text using Keras’ Tokenizer class. Within the subsequent model architecture, I replace the parameters of the embedding layer with these pre-trained embeddings and freeze the layer, preventing its weights from being updated during model training.
                                                                 Importantly, since the test set must remain unseen to avoid introducing bias, I utilize the same tokenizer trained on the training set in order to tokenize words in the test set. This implies that words found only in the test set and not the training set cannot be embedded, and have their embeddings set to 0. I also pad to the same length and specifications as the training set.</p>
 
-                                                        <h4 style="text-align:center;">2.2. BERT (Bidirectional Encoder Representations from Transformer)</h4>
+                                                        <h5 style="text-align:left;">2.2. BERT (Bidirectional Encoder Representations from Transformer)</h4>
                                                             <p>BERT is a pre-trained language model created at Google that applies the bidirectional training of transformers to language modelling, allowing for a deeper sense of language context. Traditional single-direction language models produce a fixed representation for a word regardless of the context within which the word appears. In contrast, BERT’s representations for words are dynamically informed by the words around them.</p>
                                                             <p>I follow a strategy proposed by BERT’s original creators: I first pass the dataset’s text data into the pre-trained BERT model and obtain the weights on its last 4 hidden layers. The summation of these weights is then used as input features for the subsequent deep learning model. These were conducted using PyTorch with the Hugging Face library.</p>
 
@@ -719,8 +728,9 @@
 
                                                     <h4 style="text-align:left;">4. Model tuning: Increase model regularization</h4>
                                                         <p>
-                                                        ▪ Increase traditional dropout<br>
-                                                        ▪ Add recurrent dropout to LSTM layer in order for recurrent weights to be additionally regularized
+                                                            I carry out model tuning using a left-out test set.
+                                                            ▪ Increase traditional dropout<br>
+                                                            ▪ Add recurrent dropout to LSTM layer in order for recurrent weights to be additionally regularized
                                                         </p>
 
                                                     <h4 style="text-align:left;">5. Model tuning: Increase model complexity</h4>
@@ -818,7 +828,7 @@
                                                     </p>
                                                     
                                                     <p>
-                                                        <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">Time savings</span> of 250 hours a year from leasing agents having to manually go through each new prospect before deciding who to reach out to.<br>
+                                                        <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">Time savings</span> of 250 hours a year from leasing agents not having to manually go through each new prospect before deciding who to reach out to.<br>
                                                         <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">50% increase in successful rents</span> by leasing agents who are able to go after the most lucrative prospects from the get-go.<br>
                                                         <span style="font-family:Montserrat; font-weight:700; font-size:150%; color:#fab300">30% increase in Funnel's software functionality</span> thus enhancing its utility to leasing agents.
                                                     </p>
@@ -835,21 +845,21 @@
                                                             Different subsets of the data are obtained at different points in time of the prospective renter's journey with a leasing agent. 
                                                             Specifically, more data is obtained as this journey progresses through the following stages:</p>
                                                             
-                                                        <h5 style="text-align:center;">Stage 1: Prospect creation</h5>
+                                                        <h5 style="text-align:left;">Stage 1: Prospect creation</h5>
                                                             <p>This stage occurs when a new prospective renter first expresses interest in a property. Here, the prospect has just entered into our database and we possess only basic information on them, such as:<br>
                                                                 ▪ Prospective renter data: Age, Gender, ...<br>
                                                                 ▪ Source data: How the prospective renter heard about the property<br>
                                                                 ▪ Property data: Data on the property that the prospective renter expressed interest in<br>
                                                             </p>
                                                         
-                                                        <h5 style="text-align:center;">Stage 2: Communication</h5>
+                                                        <h5 style="text-align:left;">Stage 2: Communication</h5>
                                                         <p>This stage occurs when the leasing agent and prospective renter subsequently start to exchange more and more communications. Over time, more data is accumulated on these interactions, such as:<br>
                                                             ▪ Medium of communications: Call, Email, Text, ...<br>
                                                             ▪ Number of communications per medium<br>
                                                             ▪ Reply speed of prospective renter<br>
                                                         </p> 
 
-                                                        <h5 style="text-align:center;">Stage 3: Property Viewing</h5>
+                                                        <h5 style="text-align:left;">Stage 3: Property Viewing</h5>
                                                         <p>This stage occurs when the prospective renter tours their property of interest. Here, we further obtain data on viewings, such as:<br>
                                                             ▪ Medium of viewing: In-person, Video call<br>
                                                             ▪ Speed of scheduling a viewing<br>
@@ -893,17 +903,26 @@
                                                             ▪ Text analysis on conversations between a prospective renter and leasing agent: Length of text, text content, ... 
                                                         </p>
 
-                                                    <h4 style="text-align:left;">5. Train & tune models using Bayesian Optimization: Logistic Regression, CatBoost, XGBoost</h4>
-                                                        <p>We benchmark the above suite of models. 
-                                                            Importantly, we choose to explore CatBoost since the final subset of features selected for modelling contains many categorical features.
-                                                            CatBoost provides in-built categorical feature encoding, thus cutting down on significant time required for such encoding tasks prior to model building.
-                                                            Additionally, the dataset is extremely large, with 60 million rows. This puts an extra strain on computational time for model building. 
-                                                            CatBoost has been shown to be 8x faster than the state-of-the-art XGBoost, thus it proves further ideal for this project.
+                                                    <h4 style="text-align:left;">5. Train &amp tune model hyperparameters using Bayesian Optimization: Logistic Regression, CatBoost, XGBoost</h4>
+                                                        <p>
+                                                            We benchmark the above suite of models to determine the best for our use-case.
+                                                            To tune each model, I utilize a Bayesian Optimization search method with stratified k-fold cross validation in order to obtain the optimal hyperparameters in the most efficient manner.
                                                         </p>
 
-                                                        <p>Read more about CatBoost here: 
-                                                            <a href="https://neptune.ai/blog/when-to-choose-catboost-over-xgboost-or-lightgbm" style="color: black;" target="_blank">CatBoost VS XGBoost VS LightGBM</a>,
-                                                            <a href="https://hanishrohit.medium.com/whats-so-special-about-catboost-335d64d754ae" style="color: black;" target="_blank">What's so special about CatBoost?</a>
+                                                        <p>
+                                                            Importantly, we choose to explore CatBoost since our use-case seemed ideal for it to shine:<br>
+                                                            ▪ The final subset of features selected for modelling contains many categorical features.
+                                                            CatBoost provides in-built categorical feature encoding, thus cutting down on significant time required for such encoding tasks prior to model building.
+                                                            Read more about the CatBoost's hyperparameters for categorical feature encoding <a href="https://towardsdatascience.com/categorical-features-parameters-in-catboost-4ebd1326bee5#:~:text=The%20core%20idea%20behind%20CatBoost,only%20the%20objects%20that%20are" style="color: black;" target="_blank">here</a>! <br>
+                                                            ▪ The dataset is extremely large with 60 million rows. This puts an extra strain on computational time for model building. 
+                                                            CatBoost has been shown to be 8x faster than the state-of-the-art XGBoost.<br>
+                                                            Read more about CatBoost: 
+                                                                <a href="https://neptune.ai/blog/when-to-choose-catboost-over-xgboost-or-lightgbm" style="color: black;" target="_blank">CatBoost VS XGBoost VS LightGBM</a>,
+                                                                <a href="https://hanishrohit.medium.com/whats-so-special-about-catboost-335d64d754ae" style="color: black;" target="_blank">What's so special about CatBoost?</a>
+                                                        </p>
+    
+                                                        <p>
+                                                            Our modelling results find CatBoost to indeed be the best performing model.
                                                         </p>
 
                                                     <h4 style="text-align:left;">6. Obtain SHAP feature importances</h4>
@@ -975,34 +994,254 @@
                 </div>
             </div>
         </div>
-        <!-- Portfolio item 6 modal popup-->
+        <!-- Page 6: Columbia -->
         <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="close-modal" data-bs-dismiss="modal"><img src="assets/icons/close.svg" alt="Close modal" /></div>
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-lg-8">
                                 <div class="modal-body">
                                     <!-- Project details-->
-                                    <h2 class="text-uppercase">Project Name</h2>
-                                    <p class="item-intro text-muted">Lorem ipsum dolor sit amet consectetur.</p>
-                                    <img class="img-fluid d-block mx-auto" src="assets/img/portfolio/6.jpg" alt="..." />
-                                    <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
-                                    <ul class="list-inline">
-                                        <li>
-                                            <strong>Client:</strong>
-                                            Window
-                                        </li>
-                                        <li>
-                                            <strong>Category:</strong>
-                                            Photography
-                                        </li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
-                                        <i class="fas fa-xmark me-1"></i>
-                                        Close Project
+                                    <h2 class="text-uppercase">Predicting Avazu's click-through rates</h2>
+                                    <h3 class="text-warning">CatBoost, XGBoost, LightGBM </h3>
+                                    <p class="item-intro text-muted">
+                                        Ensembled 12 CatBoost, XGBoost, LightGBM models using Stacking, with Elastic-Net Logistic Regression as meta-model.<br>
+                                        Applied numerous categorical feature encoding methods on dataset with purely categorical features.<br>
+                                        Extensive feature engineering to capture temporal nature of consumer clicks.<br>
+                                        <b>Placed 4<sup>th</sup> out of 200 participants.</b>
+                                    </p>
+
+
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        <a href="https://github.com/sheilateozy/ColumbiaCompetition_Predicting-Clickthrough-Rates" style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
                                     </button>
+                                    <br>
+                                    <br>
+                                    <br>
+
+                                    <div class="container">
+                                        <div class="row justify-content-center">
+                                            <div class="col-lg-8" style="text-align:justify;">
+                                                <h3 style="text-align:left;">About</h3>
+                                                    <p>I competed in a team of 3 in a Columbia Engineering competition open to Masters students.
+                                                        This competition was adapted from Avazu's highly popular Kaggle competition in 2015, linked 
+                                                        <a href="https://www.kaggle.com/c/avazu-ctr-prediction" style="color: black;" target="_blank">here</a>.
+                                                    </p>
+
+                                                    <p>Avazu is a programmatic advertising platform that uses machine learning to decide which mobile advertisements get pushed to which consumers.
+                                                        Its aim is to maximize advertising effectiveness by ensuring the correct target group receieves the advertisements they are most interested in.
+                                                    </p>
+                                                        
+                                                    <p>This competition is to predict consumer click-through rates on mobile advertisements, ie. whether a consumer clicks on an advertisement.</p>
+                                                        
+                                                    <p>In online advertising, click-through rate is a very important metric for evaluating ad performance and is used in sponsored search and real-time bidding.</p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Data</h3>
+                                                    <p>This competition uses 4 million rows with ~30 features that contain information about the consumer's mobile device, the mobile advertisement, the website on which the advertisement was encountered, etc.
+                                                        Each row depicts a specific user on a specific mobile device, encountering a specific mobile advertisement, and the target of whether the user clicked on it.
+                                                    </p>
+                                                <br>
+                                                <br>
+                                                <h3 style="text-align:left;">Project Methodology</h3>
+                                                <br>
+                                                    <h4 style="text-align:left;">1. Obtain training and test sets via time split:<br>Due to time nature of data</h4>
+                                                        <p>It is critical to observe that the data involves a certain time-series nature to it. 
+                                                            The same consumer can encounter the mobile advertisements more than once at different points in time, some being the same advertisement as before and others being new advertisements.
+                                                            The consumer's decision of whether to click on the advertisement, which is our target variable, can therefore be associated with the consumer's click history in the past. 
+                                                            As such, the rows in our dataset are no longer independent of each other.</p>
+
+                                                        <p>In this situation, the typical method of dividing data into training and test sets via a random split can therefore introduce data leakage from the train to the test set.
+                                                            We therefore split based on a cut-off date and time instead. This cut-off is chosen such that the training set is ~80% and the test set is ~20% of the data.</p>
+                                                        
+                                                    <h4 style="text-align:left;">2. Feature engineering to identify unique consumers from device data</h4>
+                                                        <br>
+                                                        <h5 style="text-align:left;">2.1. <i>consumer</i></h5>
+                                                            <p>There are multiple columns in the data that tracks mobile device information, 
+                                                                such as <i>device_ip, device_id, device_model</i> etc. 
+                                                                We define a unique consumer as one that has the same value for all of such columns. 
+                                                            </p>
+
+                                                            <p>Thus, we create a new column, <i>consumer</i>, which is the string concatenation of the values in these columns.
+                                                                <i>consumer</i> therefore defines the unique consumers in our dataset.
+                                                            </p>
+                                                    
+                                                    <h4 style="text-align:left;">3. Feature engineering to extract time nature of data</h4>
+                                                        <br>
+                                                        <h5 style="text-align:left;"><i>3.1. click_history</i></h5>
+                                                            <p>This tracks the click history made by the same user up to the current point in time, depicted as a string of previous click history.</p>
+                                                        
+                                                            <p>
+                                                            For example, assume there are 2 users, A and B, and they appear in the toy dataset below, with rows sorted chronologically. 
+                                                            Note that <i>target</i> refers to whether or not the user clicked on the mobile advertisement they encountered. 
+                                                            Thus, <i>click_history</i> is engineered from <i>target</i>, as follows. 
+                                                            </p>
+
+                                                            <center>
+                                                                <table style="border:1px dotted black;">
+                                                                    <tr>
+                                                                        <th style="border:1px dotted black;"><i>&nbsp; time &nbsp;</i></th>
+                                                                        <th style="border:1px dotted black;"><i>&nbsp; user &nbsp;</i></th>
+                                                                        <th style="border:1px dotted black;"><i>&nbsp; target &nbsp;</i></th>
+                                                                        <th style="border:1px dotted black;"><i>&nbsp; click_history &nbsp;</i></th>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0900</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">A</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">1</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0901</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">A</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">"1"</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0902</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;" >B</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">NA</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0903</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">A</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">1</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">"10"</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0904</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">B</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">"0"</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0905</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">A</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">"101"</td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">0906</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">B</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">1</td>
+                                                                        <td style="border:1px dotted black; text-align: center; vertical-align: middle;">"00"</td>
+                                                                    </tr>
+                                                                </table>
+                                                            </center>
+                                                        <br>
+                                                        <br>
+                                                        <h5 style="text-align:left;">3.2. <i>hour_of_day, day_of_week</i></h5>
+                                                            <p>We converted the original <i>time</i> column into 2 separate columns to better extract signal for our model.</p>
+                                                        
+                                                        <h5 style="text-align:left;">3.3. <i>device_id_count</i></h5>
+                                                            <p>This depicts the total number of mobile advertisements that each mobile device encounters up to the current point in time.
+                                                                We hypothesize that this influences whether or not a user using that mobile device will click on the next advertisement they encounter.
+                                                            </p>
+                                                        
+                                                        <h5 style="text-align:left;">3.4. <i>hour_user_count</i></h5>
+                                                            <p>This depicts the total number of mobile advertisements that each user encounters up to the current point in time, in each hour of day.
+                                                                Again, we make the same hypothesis as above.
+                                                            </p>
+                                                    <br>
+                                                    <h4 style="text-align:left;">4. Feature cleaning of rare values</h4>
+                                                        <p>For catgorical features, we remove rare feature values, defined as levels of the feature that only appear once.
+                                                            We group such levels together into a "Rare" category.
+                                                        </p>
+                                                    <br>
+                                                    <h4 style="text-align:left;">5. Encode categorical features:<br>Using Hash Encoding, Ordered Target Encoding, Ordinal Encoding</h4>
+                                                        <p>The dataset consists of purely categorical features.
+                                                            Thus, we explore multiple encoding methods to determine the best methods per feature type.
+                                                        </p>
+
+                                                        <h5 style="text-align:left;">5.1. Hash Encoding: For features with high cardinality</h5>
+                                                            <p>
+                                                                Hash Encoding reduces the number of new features created from the encoding to a lower dimension compared to that of the original feature. 
+                                                                This is useful for features with high cardinality.
+                                                            </p>
+
+                                                        <h5 style="text-align:left;">5.2. Ordinal Encoding: For features with intuitive ordering</h5>
+                                                            <p>
+                                                                For categorical features in which there exists an intuitive ordering among feature levels, 
+                                                                we use Ordinal Encoding to capture this ordering for the model.
+                                                            </p>
+
+                                                        <h5 style="text-align:left;">5.3. Ordered Target Encoding: For remaining features</h5>
+                                                            <p>
+                                                                Target Encoding is the substitution of a category with the mean target value for that category.
+                                                                However, this introduces target leakage since the target-encoded value for an observation includes the effect of that observation's target value,
+                                                                thus this encoded feature value for the observation has the target baked inside it. 
+                                                            </p>
+
+                                                            <p>
+                                                                Ordered Target Encoding builds upon traditional Target Encoding by alleviating this issue.
+                                                                It is an encoding method proposed by the developers of CatBoost, and is regarded to be part of the reason why CatBoost performs so well on categorical data.
+                                                                It thus also goes by the name CatBoost Target Encoding.
+                                                            </p>
+
+                                                            <p>
+                                                                Ordered Target Encoding works as follows:<br>
+                                                                1. Randomly permute the rows of the training set.<br>
+                                                                2. The target-encoded value for a category in the <i>i<sup>th</sup></i> observation is computed as the mean target value of that category in all previous observations placed before it in the dataset.
+                                                                    This is akin to taking a running average down the dataset. <br>
+                                                                3. This creates a problem: For the first few rows in the dataset, target-encoded values have high variance since they were calculated using very few observations. 
+                                                                    However, as we move down the dataset, the target-encoded values become increasingly stable.
+                                                                    This means the initial part of the dataset has weak estimates compared to the rest of it,
+                                                                    and this initial part of the dataset was randomly chosen from Step 1.<br><br>
+
+                                                                    CatBoost handles this problem by conducting more than 1 random permutations of the dataset and repeating all the above steps for each permutation.
+                                                                    Assuming CatBoost conducts <i>n</i> random permutations, it then obtains <i>n</i> different target-encoded values for each categorical feature in each observation.
+                                                                    At each step of gradient boosting, CatBoost randomly chooses one of these <n>target-encoded values</n> to be used.
+                                                                    This alleviates the problem outlined.
+                                                            </p>
+                                                    <br>
+                                                    <h4 style="text-align:left;">6. Train &amp tune model hyperparameters using Bayesian Optimization: CatBoost, XGBoost, LightGBM</h4>
+                                                        <p>
+                                                            To tune each model, I utilize a Bayesian Optimization search method with stratified k-fold cross validation in order to obtain the optimal hyperparameters in the most efficient manner.
+                                                        </p>
+                                                    
+                                                        <p>The rationale for choosing these specific models are:<br>
+                                                            ▪ XGBoost: Strong history of high performance on Kaggle competitions<br>
+                                                            ▪ LightGBM: A variant of XGBoost with faster computational speed, useful given our large dataset<br>
+                                                            ▪ CatBoost: A variant of XGBoost with in-built categorical feature encoding, useful given the many categorical features in our dataset
+                                                        </p>
+
+                                                        <p>
+                                                            In total, 12 CatBoost, XGBoost, and LightGBM models were trained and tuned.
+                                                        </p>
+                                                    <br>
+                                                    <h4 style="text-align:left;">7. Ensemble models:<br>Using Stacking, with Elastic Net Logistic Regression as meta-model</h4>
+                                                        <p>
+                                                            1. Feed the predictions of each of the 12 models as inputs to an Elastic Net Logistic Regression.<br>
+                                                            2. Train and tune Elastic-Net Logistic Regression using Bayesian Optimization search method with stratified k-fold cross validation.<br>
+                                                            3. The Elastic-Net Logistic Regression essentially combines the predictions of the 12 models via a weighted average. 
+                                                            The prediction of the Elastic-Net Logistic Regression is therefore our final prediction.<br>
+                                                        </p>
+
+                                                        <h5 style="text-align:left;">7.1. Why Logistic Regression?</h5>
+                                                            <p>We choose Logistic Regression as our meta-model for Stacking since this is a classification task, 
+                                                                thus we require the output of our meta-model to be constrained between 0 and 1.
+                                                            </p>
+
+                                                        <h5 style="text-align:left;">7.2. Why Elastic Net regularization?</h5>
+                                                            <p>
+                                                                Since the inputs to the Logistic Regression are the predictions of each of the 12 models,
+                                                                using an Elastic Net regulatization on the regression essentially tells the regression to figure out how to best combine the 12 models' predictions (which predictions to put greater or less weight on)
+                                                                to optimally fit the target. 
+                                                            </p>
+
+                                                            <p>This allows us to ensemble the 12 models' predictions in a more systematic manner, as opposed to taking a simple average of the 12 predictions.</p>
+
+                                                    <h4 style="text-align:left;">8. Re-run on full data</h4>
+                                                        <p>
+                                                            In all the above steps, we had divided the competition data into a training set (80%) and test set (20%).
+                                                            Now, armed with the best hyperparamteters found for each model as well as the meta-model, we re-run all of the above on the full competition training dataset to maximize training data before using the models to obtain a final prediction for the competition test set.
+                                                        </p>
+                                            <center>
+                                                <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal" type="button">
+                                                    <i class="fas fa-xmark me-1"></i>
+                                                    Close Project
+                                                </button>
+                                            </center>
                                 </div>
                             </div>
                         </div>
@@ -1010,6 +1249,15 @@
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+
+
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->

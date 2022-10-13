@@ -280,7 +280,22 @@ else:
                         </a>
                         <div class="portfolio-caption">
                             <div class="portfolio-caption-heading">Teaching Python at Columbia</div>
-                            <div class="portfolio-caption-subheading text-muted">I created and taught a 2-day crash course<br>teaching Python to MBA students.<br><br><b>100% positive reviews! ☻</b></div>
+                            <div class="portfolio-caption-subheading text-muted">I created and taught a course<br>teaching Python to MBA students.<br><br><b>100% positive reviews! ☻</b></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
+                    <!-- Portfolio item 8-->
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal8">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/images/portfolio/police/police.jpeg" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Policing the Police</div>
+                            <div class="portfolio-caption-subheading text-muted">Predicting fatal police violence in America.<br><br><b>A 2020 passion project inspired by<br>the year's focus on police accountability.</b></div>
                         </div>
                     </div>
                 </div>
@@ -425,7 +440,7 @@ else:
 
                 <div class="modal-body">
                     <!-- Project details-->
-                    <h2 class="text-uppercase">Spotify competition:<br>Predicting sequential track-skipping</h2>
+                    <h2 class="text-uppercase">Predicting sequential track-skipping</h2>
                     <h3 class="text-warning">XGBoost</h3>
                     <p class="item-intro text-muted">
                         Windowed feature engineering for sequential information.<br>
@@ -1076,7 +1091,7 @@ else:
                                     interest in the properties they manage.
                                 </p>
 
-                                <p>Our project involves creating a machine learning model that scores prospective
+                                <p>Our project involves using machine learning to scores prospective
                                     renters in terms of their conversion rate, ie. probability of eventually renting
                                     from the leasing agent.</p>
 
@@ -1292,7 +1307,7 @@ else:
                                 <h3 style="text-align:left;">One cool takeaway:<br>Using ROC-AUC to tailor metrics to
                                     business goals</h3>
                                 <p>Machine learning models can be measured across a suite of metrics.
-                                    In order to make modelling decisions that push my project towards attaining its
+                                    In order to make modelling decisions that push our project towards attaining its
                                     business goals, we specifically tailor the metric used in modelling (hyperparameter
                                     tuning, model selection) to these goals.
                                     We choose the ROC-AUC (Area under the ROC curve) due to 3 key reasons:</p>
@@ -1784,6 +1799,227 @@ else:
                                         data-bs-dismiss="modal" type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
+                                    </button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Page 8: Police Violence -->
+    <div class="portfolio-modal modal fade" id="portfolioModal8" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/icons/close.svg" alt="Close modal" />
+                </div>
+                <div class="modal-body">
+                    <!-- Project details-->
+                    <h2 class="text-uppercase">Policing the Police</h2>
+                    <h3 class="text-warning">Logistic Regression, Random Forest, Neural Network</h3>
+                    <p class="item-intro text-muted">
+                        Topic analysis on text using Latent Dirichlet Allocation.<br>
+                        Data analysis across time, state lines, and racial groups.
+                    </p>
+                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                        <a href="https://github.com/sheilateozy/Policing-the-Police"
+                            style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
+                    </button>
+                    <br>
+                    <br>
+                    <br>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8" style="text-align:justify;">
+                                <h3 style="text-align:left;">About</h3>
+                                    <p>
+                                        Since the death of George Floyd in 2020, protests against police violence have resurfaced across the world. Inspired by
+                                        this phenomenon, this project analyses all police killings between 2015 - 2020 by merging data from three of the largest
+                                        databases of police violence in America: Mapping Police Violence, The Washington Post, and Deadspin.
+                                    </p>
+
+                                    <p>
+                                        This project offers 2 insights:<br>
+                                        ▪ Data Analysis & Visualisation: Analysis on how police violence has evolved over time and across state lines, how race plays a role, and text mining on the circumstances in which this violence takes place.<br>
+                                        ▪ Machine learning: Build a model that predicts if an individual will be killed when they encounter the police.
+                                    </p>
+                                <br>
+                                <h3 style="text-align:left;">Data Analysis & Visualisation</h3>
+                                    <h4 style="text-align:left;">1. Does race affect police violence?</h4>
+                                        <p>
+                                            I group individuals into the 5 largest racial groups in America (White, Black, Hispanic, Native American, Asian).     
+                                            I start by obtaining the proportion of races amongst police-killing victims and observe that 50% of victims killed are White, which seems to
+                                            disprove claims of racial biases at face value. However, I dig deeper by obtaining open-source data from the Federal
+                                            Bureau of Investigation on the count of criminal offenders from each racial group from 2015-2019. I utilize this
+                                            data to calculate the rate at which criminal offenders of each race are killed per year, and find that all other
+                                            races are in fact killed at disproportionate rates compared to White people, and that this trend remains consistent over
+                                            time. I therefore suspect, at this juncture, that Race is likely to be an important feature in our subsequent machine
+                                            learning model.
+                                        </p>
+
+                                        <center>
+                                            <img class="img-fluid"
+                                            src="assets/images/portfolio/police/fig1.png">
+                                        </center>
+
+                                    <h4 style="text-align:left;">2. Rate of police violence per state</h4>
+                                        <p>
+                                            I use population data obtained from the United States Census Bureau to adjust for population size differences between states to avoid bias, and build 
+                                            heat maps of how states differ by their rate of police killings per million individuals. The redder the shaded area, the higher the rate.
+                                        </p>
+
+                                        <center>
+                                            <img class="img-fluid"
+                                            src="assets/images/portfolio/police/fig2.png">
+                                        </center>
+
+                                    <br>
+                                    <h4 style="text-align:left;">3. Why do states differ in police violence?</h4>
+                                        <p>
+                                            I start by hypothesizing 3 biggest potential reasons:<br>
+                                            ▪ Differences in education levels (Proxied by share of population that completed high school)<br>
+                                            ▪ Differences in income levels<br>
+                                            ▪ Differences in share of white race in population
+                                        </p>
+
+                                        <p>
+                                            To test our hypothesis, I plot dual Y-axis graphs for the top 5 and bottom 5 states identified in our heat maps between
+                                            the count of police killings and each factor, and observe strong correlations that states with higher police violence tend to have:<br>
+                                            ▪ Lower education levels<br>
+                                            ▪ Lower income levels<br>
+                                            ▪ Lower share of white race in population
+                                        </p>
+
+                                        <center>
+                                            <img class="img-fluid"
+                                            src="assets/images/portfolio/police/fig3.png">
+                                        </center>
+
+                                    <br>
+                                    <h4 style="text-align:left;">4. Topic Analysis on descriptions of police violence deaths: Latent Dirichlet Allocation</h4>
+                                        <p>
+                                            Each row in the dataset contains a paragraph of text outlining the circumstances in which the police killing took place. Since
+                                            machine learning models are unable to utilize texts as features, I aim to create meaningful new
+                                            features for our model using these texts.
+                                        </p>
+
+                                        <p>
+                                            I first seek to better understand the major topics that exist within this column by conducting Topic Analysis using a Latent Dirichlet Allocation Model, and write a function to produce a
+                                            word cloud of the top 45 frequently appearing words in each topic. Setting the number of topics as 2 generates the most
+                                            distinct topics, implying there are 2 distinct circumstances involving police killings: Involving homes
+                                            and involving vehicles.
+                                        </p>
+
+                                        <center>
+                                            <img class="img-fluid"
+                                            src="assets/images/portfolio/police/fig4.png">
+
+                                            <img class="img-fluid"
+                                            src="assets/images/portfolio/police/fig5.png">
+                                        </center>
+                                            
+                                        <p>
+                                            By inspecting the wordclouds for each, I also unsurprisingly find that the latter circumstance also involves victims fleeing from the police. We thus create 3
+                                            new binary columns <i>home_involved, vehicle_involved, was_fleeing,</i> to depict these circumstances. 
+                                        </p>
+
+                                    <h3 style="text-align:left;">Machine Learning Methodology</h3>
+                                        <p>
+                                            I seek to predict if an individual will be killed when they encounter the police.
+                                        </p>
+
+                                        <h4 style="text-align:left;">1. Impute missing data using KNN algorithm</h4>
+                                            <p>
+                                                As opposed to simply dropping rows with missing values which loses valuable information for our model,
+                                                I choose KNN imputation since it is applicable for both continuous and discrete data, both of which exist in the dataset.
+                                                I set the number of nearest neighbors (k) to be 5, where I specifically choose an odd number for k so as to avoid
+                                                ties in the multiple binary columns in our dataset. I also avoid both choosing too low a value for k
+                                                (which increases the influence of noise) as well as choosing too high a value for k (which tends to blur local effects).
+                                                As such, I settle at a comfortable k=5.
+                                            </p>
+
+                                        <h4 style="text-align:left;">2. Scale features</h4>
+                                            <p>
+                                                The dataset includes multiple
+                                                features spanning varying degrees of magnitude, which presents a problem when running machine
+                                                learning algorithms utilizing gradient descent as an optimization
+                                                technique, wherein the difference in ranges of features will cause different step sizes for each feature.
+                                                I therefore normalize all continuous data using a MinMax scaler: (X - X<sub>min</sub>)/(X<sub>max</sub> - X<sub>min</sub>).
+                                            </p>
+
+                                        <h4 style="text-align:left;">3. Handle class imbalance in target by oversampling</h4>
+                                            <p>
+                                                There are 7698 rows where the target, <i>killed</i>, is 1 and only 573 rows where it is 0. This presents a problem since most machine
+                                                learning algorithms work best when the number of samples in each class are around equal.
+                                                To resolve this, I oversample the minority class, <i>killed</i> = 0, ie. randomly replicate samples from the minority class to
+                                                produce an equal ratio of data points for each class.
+                                            </p>
+
+                                        <h4 style="text-align:left;">4. Choose model performance metrics: F-Score</h4>
+                                            <p>
+                                                Before model training, I first decide on the most important metrics to the context of our analysis:<br>
+                                                <b>1) Recall</b>: I focus on identifying killed = 1, since it is of greater significance to
+                                                identify individuals whose lives are in danger over those who are not.<br>
+                                                <b>2) Precision</b>: It is important to be certain when identifying individuals whose lives are in danger.<br>
+                                                <b>3) F-Score</b>: Given the combined emphasis on both Recall and Precision, I ultimately look at F-Score as a
+                                                combined measure of both.
+                                            </p>
+
+                                        <h4 style="text-align:left;">5. Train & tune model hyperparameters using Random Search: Logistic Regression, Random Forest, Neural Network</h4>
+                                            <p>
+                                                To tune each model, I start by applying RandomizedSearchCV using a random parameter grid. I choose to first conduct this Random
+                                                Search in order to be able to sample a wide range of hyperparameter values, since a Random Search does not try every
+                                                combination on the random parameter grid, but only a random selection of it. 
+                                                I then utilize the best parameters outputted from the Random Search to narrow down the best range of values for each hyperparameter and apply Grid Search using these promising hyperparameters ranges found.
+                                                This allows me to concentrate my hyperparameter search to further improve model performance.
+                                            </p>
+
+                                            <p>
+                                                The rationale for choosing these specific models are:<br>
+                                                ▪ Logistic Regression: As a baseline naive model for comparison<br>
+                                                ▪ Neural Network: To implicitly detect complex nonlinear relationships between features and the target<br>
+                                                ▪ Random Forest: For interpretability of results
+                                            </p>
+
+                                            <p>
+                                                Modelling results are as follows:
+
+                                            <center>
+                                                <img class="img-fluid" src="assets/images/portfolio/police/model_results.png">
+                                            </center>
+                                            </p>
+
+                                        <h4 style="text-align:left;">6. Feature importances</h4>
+                                            <p>
+                                                An area of intrigue is undoubtedly the features that contribute most significantly to whether an individual will be killed by the police.
+                                                The top 5 features are <i>race</i>, <i>geography_type</i>, <i>police_agency</i>, <i>state_education_level</i>, and <i>state_white_share</i>.
+                                            </p>
+
+                                            <center>
+                                                <img class="img-fluid" src="assets/images/portfolio/police/feature_importance.png">
+                                            </center>
+
+                                        <h4 style="text-align:left;">7. Future improvements</h4>
+                                            <p>
+                                            A major roadblock experienced was a lack of data available online on individuals who had encountered the
+                                            police but had not been killed, and whose encounters have been recorded thoroughly using the same variables as the
+                                            ones reflected in Table 1. This arises due to the fact that emphasis is often, and logically, placed on recording fatal
+                                            encounters with the police, rather than otherwise. A worthy extension of this project would be to procure more data
+                                            regarding non-fatal police encounters so that class imbalance will no longer be an issue, and we could have a more
+                                            complete understanding of police encounters in America.
+                                            </p>
+
+                                <center>
+                                    <button class="btn btn-primary btn-xl text-uppercase"
+                                        data-bs-dismiss="modal" type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                  
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        <a href="https://github.com/sheilateozy/Policing-the-Police/blob/main/slides/slides.pdf"
+                                            style="text-decoration: none; color: white;" target="_blank">Slides</a>
                                     </button>
                                 </center>
                             </div>

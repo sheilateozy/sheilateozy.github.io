@@ -6,9 +6,12 @@
 //
 // Scripts
 // 
+function directLinkModal(hash) {
+    $(hash).modal('show');
+}
 
 window.addEventListener('DOMContentLoaded', event => {
-
+    directLinkModal(window.location.hash);
     // Navbar shrink function
     var navbarShrink = function () {
         const navbarCollapsible = document.body.querySelector('#mainNav');
@@ -45,10 +48,10 @@ window.addEventListener('DOMContentLoaded', event => {
     );
     responsiveNavItems.map(function (responsiveNavItem) {
         responsiveNavItem.addEventListener('click', () => {
+            console.log('lin50')
             if (window.getComputedStyle(navbarToggler).display !== 'none') {
                 navbarToggler.click();
             }
         });
     });
-
 });

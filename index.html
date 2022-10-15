@@ -696,8 +696,7 @@ else:
                                     products. My work involved improving their existing demand forecasting models
                                     through 3 aspects, as follows:</p>
                                 <br>
-                                <h4 style="text-align:left;">1. Feature selection tool: Recursive Feature Elimination
-                                </h4>
+                                <h4 style="text-align:left;">1. Develop a generalizable feature selection tool</h4>
                                 <p>Nestlé collects an enormous amount of data, such as demand data, promotional data,
                                     holiday data, and competitor data. With this large amount of features available to
                                     be used for modelling, the team required a robust feature selection tool.
@@ -716,7 +715,7 @@ else:
 
 
                                 <br>
-                                <h4 style="text-align:left;">2. Feature selection at different levels</h4>
+                                <h4 style="text-align:left;">2. Investigate feature selection at different levels</h4>
                                 <p>Next, I explored different levels in which to conduct feature selection. Feature
                                     selection can be conducted at 3 main levels:</p>
                                 <li style="text-align:justify;"><b>Business level:</b> The term “business” at Nestlé
@@ -804,7 +803,7 @@ else:
                                     subsets of the original features.
                                     The process starts by using all the original features, building a Random Forest with
                                     them, and obtaining feature importance scores for all the features. This describes
-                                    steps 1 and 2 outlined above.
+                                    steps 3 and 4 outlined above.
                                     Next, we discard the feature identified to be the least important, and repeat the
                                     above.
                                     This repetition continues until the size of the feature set has been incrementally
@@ -813,15 +812,14 @@ else:
                                     model accuracy score on the validation set.</p>
 
                                 <h4 style="text-align:left;">6. Train model on optimal subset of features</h4>
-                                <p>Obtain test set predictions for various time periods to validate model</p>
+                                <p>Backtest model performance using test set for various time periods.</p>
 
-                                <h4 style="text-align:left;">7. Repeat for various levels of forecasting to determine
+                                <h4 style="text-align:left;">7. Repeat for various levels of feature selection to determine
                                     optimal level</h4>
-                                <p>As outlined above, there are 3 main levels of forecasting investigated: At the
+                                <p>As outlined above, I investigate 3 main levels: At the
                                     business level, product level, and product-store level.</p>
 
-                                <h4 style="text-align:left;">8. Repeat for different models to determine optimal model
-                                </h4>
+                                <h4 style="text-align:left;">8. Repeat for different models to determine optimal model</h4>
                                 <p>Machine learning is an iterative process. I explore the following models to determine
                                     the best for this project's use-case: Elastic Net, Random Forest, XGBoost, Deep
                                     Neural Network. </p>

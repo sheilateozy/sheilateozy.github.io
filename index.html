@@ -1151,13 +1151,12 @@ else:
                                 <br>
                                 <h3 style="text-align:left;">Project Methodology</h3>
                                 <br>
-                                <h4 style="text-align:left;">1. Data exploration: Data characteristics unique to this
-                                    project</h4>
-                                <p>Investigations reveal a special characteristic of this project's data:
-                                    Different subsets of the data are obtained at different points in time of the
+                                <h4 style="text-align:left;">1. Identify data characteristics and availability</h4>
+                                <p>Investigations reveal that different subsets of data are obtained at different points in time of the
                                     prospective renter's journey with a leasing agent.
-                                    Specifically, more data is obtained as this journey progresses through the following
-                                    stages:</p>
+                                    Specifically, more data is obtained as this journey progresses through the following main
+                                    stages:
+                                </p>
 
                                 <h5 style="text-align:left;">Stage 1: Prospect creation</h5>
                                 <p>This stage occurs when a new prospective renter first expresses interest in a
@@ -1186,8 +1185,7 @@ else:
                                     ▪ Outcome of viewing: Deposit put down, Deposit not put down<br>
                                 </p>
 
-                                <h4 style="text-align:left;">2. Make modelling decisions: Build 1 model per stage of
-                                    prospective renter's journey</h4>
+                                <h4 style="text-align:left;">2. Work with business stakeholders to architect model designs that support business decision-making</h4>
                                 <p>Given the above, instead of creating one overarching model, we develop a three-model
                                     approach, to be respectively used at each stage of the prospective renter's journey,
                                     when we procure new data.
@@ -1202,7 +1200,7 @@ else:
                                     stage</h5>
                                 <br>
                                 <p>Modelling in this manner has an important implication: We group prospective renters
-                                    in each of the 3 stages of their journey.
+                                    in each of the 3 main stages of their journey.
                                     For each stage, the corresponding model predicts conversion rate for only propective
                                     renters currently in that stage.
                                     A higher predicted conversion rate in one stage would mean that that prospective
@@ -1253,7 +1251,7 @@ else:
                                     Optimization: Logistic Regression, CatBoost, XGBoost</h4>
                                 <p>
                                     We benchmark the above suite of models to determine the best for our use-case.
-                                    To tune each model, I utilize a Bayesian Optimization search method with stratified
+                                    To tune each model, we utilize a Bayesian Optimization search method with stratified
                                     k-fold cross validation in order to obtain the optimal hyperparameters in the most
                                     efficient manner.
                                 </p>
@@ -2079,15 +2077,15 @@ else:
                                 </p>
 
                                 <center>
+                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                                        <a href="https://github.com/sheilateozy/Policing-the-Police/blob/main/slides/slides.pdf"
+                                            style="text-decoration: none; color: white;" target="_blank">Slides</a>
+                                    </button>
+
                                     <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
                                         type="button">
                                         <i class="fas fa-xmark me-1"></i>
                                         Close Project
-                                    </button>
-
-                                    <button class="btn btn-primary btn-xl text-uppercase" type="button">
-                                        <a href="https://github.com/sheilateozy/Policing-the-Police/blob/main/slides/slides.pdf"
-                                            style="text-decoration: none; color: white;" target="_blank">Slides</a>
                                     </button>
                                 </center>
                             </div>

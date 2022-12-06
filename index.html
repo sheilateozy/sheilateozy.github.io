@@ -369,8 +369,8 @@ else:
                     <!-- Project details-->
                     <h2 class="text-uppercase">Forecasting Apple's Supply Chain Costs</h2>
                     <h3 class="text-warning">ARIMA</h3>
-                    <p class="item-intro text-muted">Desktop application that uses ARIMA models to predict cost and
-                        detect errors.<br>Data visualisation dashboarding on Tableau to depict costs across components
+                    <p class="item-intro text-muted">Created Graphical UI (dekstop application) that uses ARIMA models in backend to predict cost and
+                        detect errors in real-time.<br>Data visualisation dashboarding on Tableau to depict costs across components
                         and time.<br><b>Cost savings of $20 million yearly.</b></p>
 
                     <button class="btn btn-primary btn-xl text-uppercase" type="button">
@@ -391,8 +391,8 @@ else:
                                 <p>Apple purchases components parts for its products from third party suppliers. The
                                     prices of these parts can be volatile at times due to trends and seasonalities,
                                     which snowballs into significant supply chain cost impacts.<br><br>
-                                    Our project uses ARIMA models to predict a reasonable cost range for hundreds of
-                                    parts in each month. These models work in the back-end of the following desktop
+                                    Our project uses ARIMA models to predict a reasonable cost range with 95% confidence for hundreds of
+                                    parts in each month. These models work in the backend of the following desktop
                                     application:</p>
                                 <center><img class="img-fluid"
                                         src="assets/images/portfolio/apple/desktop_application.png"></center>
@@ -403,11 +403,15 @@ else:
                                     This is used in real-time to catch areas in which Apple may be overpaying in its
                                     supply chain, or used on an ex-ante basis to negotiate future part costs with
                                     suppliers.</p>
+
+                                <p>
+                                    Lastly, we built a Tableau dashboard that provides management with a rapid visual summary of costs across all components and across time.
+                                    This dashboard was built in an interactive manner, allowing users to toggle to areas of interest, such as specific time periods.
+                                </p>
                                 <br>
                                 <h3 style="text-align:left;">Results: Making an impact at Apple</h3>
                                 <p>The ARIMA models have a small average forecasting error of < 0.1% MAPE (Mean Absolute
-                                        Percentage Error). This allows component part costs to be accurately forecasted,
-                                        translating into cost savings of $20 million annually.</p>
+                                        Percentage Error). This accurate forecasting translates into cost savings of $20 million annually.</p>
                                         <center><img class="img-fluid"
                                                 src="assets/images/portfolio/apple/cost_savings.png"></center>
                                         <br>
@@ -846,8 +850,15 @@ else:
 
                                 <h4 style="text-align:left;">8. Repeat for different models to determine optimal model</h4>
                                 <p>Machine learning is an iterative process. I explore the following models to determine
-                                    the best for this project's use-case: Elastic Net, Random Forest, XGBoost, Deep
-                                    Neural Network. </p>
+                                    the best for this project's use-case of demand forecasting: Elastic Net, Random Forest, XGBoost, Deep
+                                    Neural Network. I benchmarked these models by back-testing using custom scoring metrics.
+                                </p>
+
+                                <h4 style="text-align:left;">9. Dashboarding on Microsoft Power BI</h4>
+                                <p>To depict the the business impact of these new models built, I further created data visualisation
+                                    dashboards on Microsoft Power BI that provided a swift visual summary of the strengths of each model
+                                    in demand forecasting across each product category.
+                                </p>
                                 <br>
 
                                 <h3 style="text-align:left;">One cool takeaway:<br>Reducing bias in permutation feature

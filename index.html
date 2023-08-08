@@ -172,7 +172,7 @@
                'Tableau',
                 'Power BI',
            'Git',
-                         'Microsoft Azure']: 
+                         'App Development']: 
     knowledge = True
 
 else:                   
@@ -195,8 +195,24 @@ else:
                 </h3>
             </div>
             <div class="row">
+                <!-- SSIC classifier -->
+                <div class="col-lg-4 col-sm-6 mb-4">                   
+                    <div class="portfolio-item">
+                        <a class="portfolio-link" data-bs-toggle="modal" href="#ssic">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                            </div>
+                            <img class="img-fluid" src="assets/images/portfolio/ssic/text-classification.png" alt="..." />
+                        </a>
+                        <div class="portfolio-caption">
+                            <div class="portfolio-caption-heading">Classifying firm activities</div>
+                            <div class="portfolio-caption-subheading text-muted">Predicting firm SSIC codes using text<br>descriptions of business activity.<br><b>Time savings of 500 hours yearly.<br>Web app deployed for real-time classification.</b></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Student Data Scientist @ Apple -->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- 1) Student Data Scientist @ Apple -->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#apple"
                             id="appleForecastSupplyChain">
@@ -210,10 +226,11 @@ else:
                             <div class="portfolio-caption-subheading text-muted">I worked as a Student Data Scientist at
                                 Apple.<br><br><br><b>Cost savings of $8 million yearly.</b></div>
                         </div>
-                    </div>
+                    </div>  
                 </div>
+
+                <!-- Spotify competition -->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 2-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#spotify">
                             <div class="portfolio-hover">
@@ -228,8 +245,9 @@ else:
                         </div>
                     </div>
                 </div>
+
+                <!-- Nestle -->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 3-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#nestle">
                             <div class="portfolio-hover">
@@ -245,8 +263,9 @@ else:
                         </div>
                     </div>
                 </div>
+
+                <!-- Google competition -->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 4-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#google">
                             <div class="portfolio-hover">
@@ -263,8 +282,9 @@ else:
                         </div>
                     </div>
                 </div>
+
+                <!-- Funnel -->
                 <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 5-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#funnel">
                             <div class="portfolio-hover">
@@ -280,8 +300,9 @@ else:
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-sm-6 mb-4">
-                    <!-- Portfolio item 6-->
+
+                <!-- Columbia competition -->
+                <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#columbia">
                             <div class="portfolio-hover">
@@ -297,8 +318,9 @@ else:
                         </div>
                     </div>
                 </div>
+
+                <!-- Columbia teaching -->
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 7-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#teaching">
                             <div class="portfolio-hover">
@@ -313,8 +335,9 @@ else:
                         </div>
                     </div>
                 </div>
+
+                <!-- Policing the police -->
                 <div class="col-lg-4 col-sm-6 mb-4 mb-lg-0">
-                    <!-- Portfolio item 8-->
                     <div class="portfolio-item">
                         <a class="portfolio-link" data-bs-toggle="modal" href="#police">
                             <div class="portfolio-hover">
@@ -330,6 +353,7 @@ else:
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
@@ -358,8 +382,159 @@ else:
         </div>
     </section>
 
-    <!-- Portfolio Pages -->
-    <!-- Page 1: Apple -->
+<!-- Portfolio Pages -->
+    <!-- SSIC Classifier -->
+    <div class="portfolio-modal modal fade" id="ssic" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="close-modal" data-bs-dismiss="modal"><img src="assets/icons/close.svg" alt="Close modal" />
+                </div>
+                <div class="modal-body">
+                    <!-- Project details-->
+                    <h2 class="text-uppercase">Real-time Classification of Firm SSIC Codes</h2>
+                    <h3 class="text-warning">Ensembled BERT, Streamlit</h3>
+                    <p class="item-intro text-muted">
+                        Ensembled pre-trained BERT models fine-tuned on project data for transfer learning.<br>
+                        Utilized recent research breakthrough for deep learning ensembling methodology.<br>
+                        Augmented training text data via back-translation.<br>
+                        <b>
+                            Time savings of 500 hours yearly.<br>
+                            Web app deployed for real-time classification.
+                        </b>
+                    </p>
+
+                    <center>
+                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                            <a href="https://github.com/sheilateozy/ssic-classifier"
+                                style="text-decoration: none; color: white;" target="_blank">View on GitHub</a>
+                        </button>
+
+                        <button class="btn btn-primary btn-xl text-uppercase" type="button">
+                            <a href="https://ssic-classifier.streamlit.app/"
+                                style="text-decoration: none; color: white;" target="_blank">Use Web App</a>
+                        </button>
+                    </center>
+
+                    <br>
+                    <br>
+                    <br>
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8" style="text-align:justify;">
+                                <h3 style="text-align:left;">About</h3>
+                                <p>
+                                    This project builds a text classifier to classify firms into categories of 
+                                    business activities (target) based on the Singapore Standard Industrial 
+                                    Classification (SSIC) framework, using free-text descriptions of their business 
+                                    activities (feature). This is done by fine-tuning and ensembling multiple pre-trained 
+                                    large language models (LLMs) via a model soup.<br>
+                                </p>
+
+                                <p>
+                                    The project motivation is as follows:<br><br>
+                                    
+                                    In Singapore, all firms are required to register with the Accounting and Corporate 
+                                    Regulatory Authority (ACRA) during firm creation. During this registration, 
+                                    firms self-declare their Singapore Standard Industrial Classification (SSIC) code, 
+                                    which is the national standard for classifying economic activities, based on their 
+                                    planned business activities to be undertaken.<br>
+                                </p>
+                                    
+                                <p>
+                                    However, 2 scenarios are common:<br>
+                                    ▪ Firms may not select the most appropriate SSIC code at the point of registration.<br>
+                                    ▪ Firms may subsequently change their business activities and may not inform ACRA about this 
+                                    change.<br>
+                                    As a result, many firms' SSIC codes do not correctly reflect their business activities.
+                                    This is a problem because the government relies on accurate firm SSIC codes for various 
+                                    monitoring and development purposes.<br>
+                                </p>
+
+                                <p>
+                                    Previously, officers manually read through each firm's business activity descriptions 
+                                    that are periodically collected over time through surveys, to determine if each firm's 
+                                    SSIC code is still reflective of its current business activities. If not, officers manually 
+                                    re-assign a new SSIC code to the firm.
+                                </p>
+                                    
+                                <p>
+                                    However, this requires:<br>
+                                    ▪ A significant amount of man hours for reading thousands of texts.<br>
+                                    ▪ Officers to have a good understanding of all SSIC codes, in order to correctly 
+                                    re-assign correct SSIC codes to firms. This is difficult as there are thousands of 
+                                    different SSIC codes in existence.<br>
+                                </p>
+                                    
+                                <p>
+                                    To resolve the above problems, this project builds a text classifier to automatically 
+                                    classify firms into correct SSIC codes (target) based on free-text descriptions of their 
+                                    business activities (feature).
+                                </p>
+
+                                <h3 style="text-align:left;">Data</h3>
+                                <p>
+                                    This project uses firm business activity descriptions for each SSIC code, from multiple sources.
+                                </p>
+
+                                <h3 style="text-align:left;">Project Methodology</h3>
+                                    <h4 style="text-align:left;">1. Pre-process text of firm business activity descriptions</h4>
+                                        <p>
+                                            ▪ Remove instances of emails, websites, or digits that are irrelevant to activity descriptions<br>
+                                            ▪ Standardize common abbreviations<br>
+                                            ▪ Remove boilerplate introductions, such as "The principal activity of the company is to…"
+                                        </p>
+
+                                    <h4 style="text-align:left;">2. Split dataset into training, validation, and test sets</h4><br>                                </h4>
+
+                                    <h4 style="text-align:left;">3. Obtain additional training text data via back-translation</h4>
+                                        <p>
+                                            Due to limited training data, we artificially generate additional text for model training that are variations of the text in the original training data, which is a method termed back-translation.
+                                        </p>
+
+                                        <p>
+                                            We use <i>deep-translator</i> to translate a text from the original language (English) to a target language and then translate it back to the original language. The resulting text will be somewhat different from the original text due to translation "noise", but it conveys the same general meaning.
+                                        </p>
+
+                                        <p>
+                                            This introduces variations in sentence structure, word choice and phrasing, thereby diversifying the training data, enabling the model to learn from a broader range of sentence constructions and improve its ability to generalize to different inputs for better performance.
+                                        </p>
+
+                                    <h4 style="text-align:left;">4. Select an appropriate pre-trained large language model for text classification: BERT</h4>
+                                        <p>
+                                            We use the <i>bert-base-uncased</i> model on HuggingFace for transfer learning. BERT was chosen as it demonstrates state-of-the-art results when fine-tuned on a specific task even with a relatively small amount of training data. This is particularly beneficial in the context of this project, where only a limited amount of labeled data is available for training.
+                                        </p>
+
+                                    <h4 style="text-align:left;">5. Fine-tune multiple BERT models on our specific task</h4>
+                                        <p>
+                                            We use Optuna, an open-source hyperparameter optimization framework, to fine-tune multiple BERT models with different hyperparameter configurations for learning from our training data.
+                                        </p>
+
+                                    <h4 style="text-align:left;">6. Ensemble the fine-tuned models via model soup methodology</h4>
+                                        <p>
+                                            Model soup is a recent research breakthrough for combining multiple deep learning models into a single model through averaging the weights of each model, as outlined in the <a href='https://arxiv.org/abs/2203.05482' target='_blank'>research paper</a>.
+                                        </p>
+
+                                        <p>
+                                            We ensemble the multiple fine-tuned BERT models via this methodology to obtain an ensembled model that outperforms any single model in its "soup". This is our final model deployed.
+                                        </p>
+
+
+                                <center>
+                                    <button class="btn btn-primary btn-xl text-uppercase" data-bs-dismiss="modal"
+                                        type="button">
+                                        <i class="fas fa-xmark me-1"></i>
+                                        Close Project
+                                    </button>
+                                </center>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Apple -->
     <div class="portfolio-modal modal fade" id="apple" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -466,7 +641,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 2: Spotify -->
+
+    <!-- Spotify Competition -->
     <div class="portfolio-modal modal fade" id="spotify" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -681,7 +857,7 @@ else:
         </div>
     </div>
 
-    <!-- Page 3: Nestle -->
+    <!-- Nestle -->
     <div class="portfolio-modal modal fade" id="nestle" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -917,7 +1093,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 4: Google -->
+
+    <!-- Google Competition -->
     <div class="portfolio-modal modal fade" id="google" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1095,7 +1272,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 5: Funnel-->
+
+    <!-- Funnel-->
     <div class="portfolio-modal modal fade" id="funnel" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1414,7 +1592,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 6: Columbia -->
+
+    <!-- Columbia Competition (Avazu)-->
     <div class="portfolio-modal modal fade" id="columbia" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1794,7 +1973,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 7: Teaching -->
+
+    <!-- Teaching @ Columbia-->
     <div class="portfolio-modal modal fade" id="teaching" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -1857,7 +2037,8 @@ else:
             </div>
         </div>
     </div>
-    <!-- Page 8: Police Violence -->
+
+    <!-- Police Violence -->
     <div class="portfolio-modal modal fade" id="police" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -2130,9 +2311,6 @@ else:
             </div>
         </div>
     </div>
-
-
-
 
 </body>
 </html>
